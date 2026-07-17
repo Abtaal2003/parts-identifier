@@ -6,6 +6,20 @@ from a 132-part catalog spanning 19 asset categories (traffic signals,
 streetlights, piping, hydrants, drainage, signage, street furniture, fencing,
 electrical cabinets, EV chargers...).
 
+## Demo
+
+**Multimodal match** — the model combines the inspector's note with
+visual evidence (water spraying from the side outlet) to identify
+the correct part:
+
+![Successful match](docs/demo-match.png)
+
+**Calibrated rejection** — retrieval surfaces relevant drainage
+candidates, but the system declines: wrong style/material, and the
+asset shows no damage:
+
+![No catalog match](docs/demo-no-match.png)
+
 ## Architecture
 ```
 photo ──> [1] Cerebras gemma-4-31b vision caption ─┐
@@ -30,20 +44,6 @@ Measured on the included 50-query evaluation set (see `eval/`):
   48 evaluated queries, 675ms median latency
 - Reproduce with `uv run python eval/run_eval.py` (add `--full`
   for the end-to-end run, ~50 API calls)
-
-## Demo
-
-**Multimodal match** — the model combines the inspector's note with
-visual evidence (water spraying from the side outlet) to identify
-the correct part:
-
-![Successful match](docs/demo-match.png)
-
-**Calibrated rejection** — retrieval surfaces relevant drainage
-candidates, but the system declines: wrong style/material, and the
-asset shows no damage:
-
-![No catalog match](docs/demo-no-match.png)
 
 ## Setup (one time, uses uv)
 ```bash
