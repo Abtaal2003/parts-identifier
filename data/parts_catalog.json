@@ -1,0 +1,2252 @@
+[
+  {
+    "id": "TS-001",
+    "asset_type": "Traffic light",
+    "part_name": "LED Signal Module - Red (200mm)",
+    "part_number": "TL-LED-R200",
+    "description": "Replacement red LED lamp module for 200mm vehicular traffic signal heads. Fits polycarbonate housings.",
+    "keywords": [
+      "traffic light",
+      "signal",
+      "red light",
+      "top light",
+      "burnt out",
+      "dead lamp",
+      "flickering",
+      "LED module"
+    ],
+    "unit_price_usd": 64.5,
+    "in_stock": 10
+  },
+  {
+    "id": "TS-002",
+    "asset_type": "Traffic light",
+    "part_name": "LED Signal Module - Amber (200mm)",
+    "part_number": "TL-LED-A200",
+    "description": "Replacement amber LED lamp module for 200mm vehicular traffic signal heads. Fits polycarbonate housings.",
+    "keywords": [
+      "traffic light",
+      "signal",
+      "amber light",
+      "middle light",
+      "burnt out",
+      "dead lamp",
+      "flickering",
+      "LED module"
+    ],
+    "unit_price_usd": 64.5,
+    "in_stock": 10
+  },
+  {
+    "id": "TS-003",
+    "asset_type": "Traffic light",
+    "part_name": "LED Signal Module - Green (200mm)",
+    "part_number": "TL-LED-G200",
+    "description": "Replacement green LED lamp module for 200mm vehicular traffic signal heads. Fits polycarbonate housings.",
+    "keywords": [
+      "traffic light",
+      "signal",
+      "green light",
+      "bottom light",
+      "burnt out",
+      "dead lamp",
+      "flickering",
+      "LED module"
+    ],
+    "unit_price_usd": 64.5,
+    "in_stock": 10
+  },
+  {
+    "id": "TS-004",
+    "asset_type": "Traffic light",
+    "part_name": "LED Signal Module - Red (300mm)",
+    "part_number": "TL-LED-R300",
+    "description": "Replacement red LED lamp module for 300mm vehicular traffic signal heads. Fits polycarbonate housings.",
+    "keywords": [
+      "traffic light",
+      "signal",
+      "red light",
+      "top light",
+      "burnt out",
+      "dead lamp",
+      "flickering",
+      "LED module"
+    ],
+    "unit_price_usd": 84.5,
+    "in_stock": 10
+  },
+  {
+    "id": "TS-005",
+    "asset_type": "Traffic light",
+    "part_name": "LED Signal Module - Amber (300mm)",
+    "part_number": "TL-LED-A300",
+    "description": "Replacement amber LED lamp module for 300mm vehicular traffic signal heads. Fits polycarbonate housings.",
+    "keywords": [
+      "traffic light",
+      "signal",
+      "amber light",
+      "middle light",
+      "burnt out",
+      "dead lamp",
+      "flickering",
+      "LED module"
+    ],
+    "unit_price_usd": 84.5,
+    "in_stock": 10
+  },
+  {
+    "id": "TS-006",
+    "asset_type": "Traffic light",
+    "part_name": "LED Signal Module - Green (300mm)",
+    "part_number": "TL-LED-G300",
+    "description": "Replacement green LED lamp module for 300mm vehicular traffic signal heads. Fits polycarbonate housings.",
+    "keywords": [
+      "traffic light",
+      "signal",
+      "green light",
+      "bottom light",
+      "burnt out",
+      "dead lamp",
+      "flickering",
+      "LED module"
+    ],
+    "unit_price_usd": 84.5,
+    "in_stock": 10
+  },
+  {
+    "id": "TS-007",
+    "asset_type": "Traffic light",
+    "part_name": "Signal Visor / Hood (200mm)",
+    "part_number": "TL-VIS-200",
+    "description": "Black polycarbonate sun visor (tunnel hood) shielding a 200mm signal lens. Replace after wind or impact damage.",
+    "keywords": [
+      "traffic light",
+      "visor",
+      "hood",
+      "cracked",
+      "broken shade",
+      "missing hood",
+      "sun shield"
+    ],
+    "unit_price_usd": 18.0,
+    "in_stock": 30
+  },
+  {
+    "id": "TS-008",
+    "asset_type": "Traffic light",
+    "part_name": "Signal Lens - Clear Polycarbonate (200mm)",
+    "part_number": "TL-LENS-200",
+    "description": "Clear replacement lens for 200mm signal aspect. Replace crazed, yellowed, or shattered lenses.",
+    "keywords": [
+      "traffic light",
+      "lens",
+      "cracked lens",
+      "shattered",
+      "cloudy",
+      "yellowed"
+    ],
+    "unit_price_usd": 11.5,
+    "in_stock": 40
+  },
+  {
+    "id": "TS-009",
+    "asset_type": "Traffic light",
+    "part_name": "Signal Visor / Hood (300mm)",
+    "part_number": "TL-VIS-300",
+    "description": "Black polycarbonate sun visor (tunnel hood) shielding a 300mm signal lens. Replace after wind or impact damage.",
+    "keywords": [
+      "traffic light",
+      "visor",
+      "hood",
+      "cracked",
+      "broken shade",
+      "missing hood",
+      "sun shield"
+    ],
+    "unit_price_usd": 20.0,
+    "in_stock": 30
+  },
+  {
+    "id": "TS-010",
+    "asset_type": "Traffic light",
+    "part_name": "Signal Lens - Clear Polycarbonate (300mm)",
+    "part_number": "TL-LENS-300",
+    "description": "Clear replacement lens for 300mm signal aspect. Replace crazed, yellowed, or shattered lenses.",
+    "keywords": [
+      "traffic light",
+      "lens",
+      "cracked lens",
+      "shattered",
+      "cloudy",
+      "yellowed"
+    ],
+    "unit_price_usd": 11.5,
+    "in_stock": 40
+  },
+  {
+    "id": "TS-011",
+    "asset_type": "Traffic light",
+    "part_name": "Signal Head Mounting Bracket Kit",
+    "part_number": "TL-BRKT-U",
+    "description": "Universal aluminium bracket kit for pole- or span-wire mounting of signal heads, with stainless hardware.",
+    "keywords": [
+      "traffic light",
+      "bracket",
+      "mounting",
+      "loose head",
+      "tilted signal",
+      "hanging"
+    ],
+    "unit_price_usd": 38.0,
+    "in_stock": 22
+  },
+  {
+    "id": "TS-012",
+    "asset_type": "Traffic light",
+    "part_name": "Signal Backplate with Retroreflective Border",
+    "part_number": "TL-BP-3S",
+    "description": "Louvered black backplate with yellow retroreflective border for 3-section signal heads. Improves visibility; replace bent or missing plates.",
+    "keywords": [
+      "traffic light",
+      "backplate",
+      "border",
+      "bent",
+      "missing plate"
+    ],
+    "unit_price_usd": 46.0,
+    "in_stock": 12
+  },
+  {
+    "id": "TS-013",
+    "asset_type": "Pedestrian crossing",
+    "part_name": "Pedestrian Push Button Assembly",
+    "part_number": "PED-PB-2",
+    "description": "Weatherproof pedestrian call button with tactile arrow plate. Replaces vandalized or unresponsive crossing buttons.",
+    "keywords": [
+      "pedestrian button",
+      "crossing",
+      "push button",
+      "not working",
+      "vandalized",
+      "stuck button"
+    ],
+    "unit_price_usd": 96.0,
+    "in_stock": 14
+  },
+  {
+    "id": "TS-014",
+    "asset_type": "Pedestrian crossing",
+    "part_name": "Pedestrian Countdown Display Module",
+    "part_number": "PED-CD-16",
+    "description": "LED countdown and walking-man display module for pedestrian signal heads, 16-inch, with driver board.",
+    "keywords": [
+      "pedestrian signal",
+      "countdown",
+      "walking man",
+      "display dead",
+      "segments out"
+    ],
+    "unit_price_usd": 168.0,
+    "in_stock": 6
+  },
+  {
+    "id": "TS-015",
+    "asset_type": "Traffic controller",
+    "part_name": "Signal Controller Cabinet Door Lock Set",
+    "part_number": "TC-LOCK-2",
+    "description": "Tamper-resistant lock and handle set for roadside signal controller cabinets, keyed alike, with weather gasket.",
+    "keywords": [
+      "controller cabinet",
+      "lock",
+      "broken lock",
+      "door won't close",
+      "pried open"
+    ],
+    "unit_price_usd": 54.0,
+    "in_stock": 16
+  },
+  {
+    "id": "TS-016",
+    "asset_type": "Traffic controller",
+    "part_name": "Cabinet Ventilation Fan and Filter Kit",
+    "part_number": "TC-FAN-120",
+    "description": "120mm thermostat-controlled fan with washable dust filter for signal controller cabinets. Replace seized or noisy fans.",
+    "keywords": [
+      "controller cabinet",
+      "fan",
+      "overheating",
+      "noisy fan",
+      "filter clogged"
+    ],
+    "unit_price_usd": 31.0,
+    "in_stock": 20
+  },
+  {
+    "id": "SL-001",
+    "asset_type": "Streetlight",
+    "part_name": "Cobra Head LED Luminaire 60W",
+    "part_number": "SL-COB-60",
+    "description": "Complete 60W LED cobra-head luminaire for arm-mounted street lighting. Replaces failed or corroded fixtures.",
+    "keywords": [
+      "streetlight",
+      "street lamp",
+      "luminaire",
+      "not turning on",
+      "dark street",
+      "fixture",
+      "corroded"
+    ],
+    "unit_price_usd": 182.0,
+    "in_stock": 6
+  },
+  {
+    "id": "SL-002",
+    "asset_type": "Streetlight",
+    "part_name": "Cobra Head LED Luminaire 100W",
+    "part_number": "SL-COB-100",
+    "description": "Complete 100W LED cobra-head luminaire for arm-mounted street lighting. Replaces failed or corroded fixtures.",
+    "keywords": [
+      "streetlight",
+      "street lamp",
+      "luminaire",
+      "not turning on",
+      "dark street",
+      "fixture",
+      "corroded"
+    ],
+    "unit_price_usd": 210.0,
+    "in_stock": 6
+  },
+  {
+    "id": "SL-003",
+    "asset_type": "Streetlight",
+    "part_name": "Cobra Head LED Luminaire 150W",
+    "part_number": "SL-COB-150",
+    "description": "Complete 150W LED cobra-head luminaire for arm-mounted street lighting. Replaces failed or corroded fixtures.",
+    "keywords": [
+      "streetlight",
+      "street lamp",
+      "luminaire",
+      "not turning on",
+      "dark street",
+      "fixture",
+      "corroded"
+    ],
+    "unit_price_usd": 245.0,
+    "in_stock": 6
+  },
+  {
+    "id": "SL-004",
+    "asset_type": "Streetlight",
+    "part_name": "Cobra Head LED Luminaire 250W",
+    "part_number": "SL-COB-250",
+    "description": "Complete 250W LED cobra-head luminaire for arm-mounted street lighting. Replaces failed or corroded fixtures.",
+    "keywords": [
+      "streetlight",
+      "street lamp",
+      "luminaire",
+      "not turning on",
+      "dark street",
+      "fixture",
+      "corroded"
+    ],
+    "unit_price_usd": 315.0,
+    "in_stock": 6
+  },
+  {
+    "id": "SL-005",
+    "asset_type": "Streetlight",
+    "part_name": "Twist-Lock Photocell Sensor",
+    "part_number": "SL-PC-TL",
+    "description": "Dusk-to-dawn photocell that twist-locks onto the top of a streetlight fixture. Replace when a light stays on all day or never switches on.",
+    "keywords": [
+      "streetlight",
+      "photocell",
+      "sensor",
+      "stays on during day",
+      "won't turn on at night",
+      "dusk to dawn",
+      "scorched sensor"
+    ],
+    "unit_price_usd": 14.9,
+    "in_stock": 45
+  },
+  {
+    "id": "SL-006",
+    "asset_type": "Streetlight",
+    "part_name": "Photocell Twist-Lock Receptacle",
+    "part_number": "SL-PCR-TL",
+    "description": "NEMA twist-lock receptacle base that the photocell mounts into. Replace when contacts are burnt or the sensor no longer seats.",
+    "keywords": [
+      "streetlight",
+      "receptacle",
+      "socket",
+      "photocell base",
+      "burnt contacts",
+      "loose sensor"
+    ],
+    "unit_price_usd": 9.8,
+    "in_stock": 38
+  },
+  {
+    "id": "SL-007",
+    "asset_type": "Streetlight",
+    "part_name": "LED Driver 100W Programmable",
+    "part_number": "SL-DRV-100",
+    "description": "Constant-current programmable LED driver for cobra-head luminaires up to 100W. Replace when the lamp flickers or is dead with power present.",
+    "keywords": [
+      "streetlight",
+      "driver",
+      "ballast",
+      "flickering",
+      "dead lamp",
+      "power supply"
+    ],
+    "unit_price_usd": 42.0,
+    "in_stock": 24
+  },
+  {
+    "id": "SL-008",
+    "asset_type": "Streetlight",
+    "part_name": "Pole Base Access Door with Lock",
+    "part_number": "SL-DOOR-P",
+    "description": "Galvanized steel access door for the wiring compartment at the base of a streetlight pole, with tamper-resistant fastener.",
+    "keywords": [
+      "streetlight pole",
+      "access door",
+      "missing cover",
+      "exposed wires",
+      "base panel",
+      "hand hole"
+    ],
+    "unit_price_usd": 32.0,
+    "in_stock": 18
+  },
+  {
+    "id": "SL-009",
+    "asset_type": "Streetlight",
+    "part_name": "Pole Base Anchor Bolt Cover Set",
+    "part_number": "SL-ABC-4",
+    "description": "Set of four dome covers for pole base anchor bolts. Replace missing or rusted covers exposing bolt threads.",
+    "keywords": [
+      "streetlight pole",
+      "bolt cover",
+      "anchor bolts",
+      "rusted",
+      "missing caps",
+      "base"
+    ],
+    "unit_price_usd": 12.5,
+    "in_stock": 50
+  },
+  {
+    "id": "SL-010",
+    "asset_type": "Streetlight",
+    "part_name": "Luminaire Mast Arm 1.5m Galvanized",
+    "part_number": "SL-ARM-15",
+    "description": "1.5m galvanized steel mast arm for side-of-pole luminaire mounting. Replace bent or fatigued arms.",
+    "keywords": [
+      "streetlight",
+      "mast arm",
+      "bracket arm",
+      "bent arm",
+      "sagging",
+      "outreach"
+    ],
+    "unit_price_usd": 98.0,
+    "in_stock": 8
+  },
+  {
+    "id": "SL-011",
+    "asset_type": "Streetlight",
+    "part_name": "Luminaire Mast Arm 2.5m Galvanized",
+    "part_number": "SL-ARM-25",
+    "description": "2.5m galvanized steel mast arm for side-of-pole luminaire mounting. Replace bent or fatigued arms.",
+    "keywords": [
+      "streetlight",
+      "mast arm",
+      "bracket arm",
+      "bent arm",
+      "sagging",
+      "outreach"
+    ],
+    "unit_price_usd": 118.0,
+    "in_stock": 8
+  },
+  {
+    "id": "SL-012",
+    "asset_type": "Streetlight",
+    "part_name": "Inline Fuse Holder and 10A Fuse Kit",
+    "part_number": "SL-FUSE-10",
+    "description": "Waterproof inline fuse holder with 10A fuses for pole base wiring. Replace after fault trips or corrosion.",
+    "keywords": [
+      "streetlight",
+      "fuse",
+      "blown fuse",
+      "no power",
+      "wiring",
+      "base compartment"
+    ],
+    "unit_price_usd": 6.4,
+    "in_stock": 80
+  },
+  {
+    "id": "PP-001",
+    "asset_type": "Piping",
+    "part_name": "PVC Coupling 50mm",
+    "part_number": "PP-CPL-50",
+    "description": "Slip-fit PVC coupling for joining two 50mm pipe ends. Used to repair cracked or leaking sections after cutting out the damaged length.",
+    "keywords": [
+      "pipe",
+      "pvc",
+      "leak",
+      "crack",
+      "coupling",
+      "joint",
+      "repair"
+    ],
+    "unit_price_usd": 3.1,
+    "in_stock": 100
+  },
+  {
+    "id": "PP-002",
+    "asset_type": "Piping",
+    "part_name": "PVC 90\u00b0 Elbow 50mm",
+    "part_number": "PP-ELB-50",
+    "description": "90-degree PVC elbow for 50mm pipe runs. Replace cracked or leaking corner fittings.",
+    "keywords": [
+      "pipe",
+      "pvc",
+      "elbow",
+      "corner",
+      "leak at bend",
+      "fitting"
+    ],
+    "unit_price_usd": 3.6500000000000004,
+    "in_stock": 80
+  },
+  {
+    "id": "PP-003",
+    "asset_type": "Piping",
+    "part_name": "PVC Coupling 75mm",
+    "part_number": "PP-CPL-75",
+    "description": "Slip-fit PVC coupling for joining two 75mm pipe ends. Used to repair cracked or leaking sections after cutting out the damaged length.",
+    "keywords": [
+      "pipe",
+      "pvc",
+      "leak",
+      "crack",
+      "coupling",
+      "joint",
+      "repair"
+    ],
+    "unit_price_usd": 3.85,
+    "in_stock": 100
+  },
+  {
+    "id": "PP-004",
+    "asset_type": "Piping",
+    "part_name": "PVC 90\u00b0 Elbow 75mm",
+    "part_number": "PP-ELB-75",
+    "description": "90-degree PVC elbow for 75mm pipe runs. Replace cracked or leaking corner fittings.",
+    "keywords": [
+      "pipe",
+      "pvc",
+      "elbow",
+      "corner",
+      "leak at bend",
+      "fitting"
+    ],
+    "unit_price_usd": 4.525,
+    "in_stock": 80
+  },
+  {
+    "id": "PP-005",
+    "asset_type": "Piping",
+    "part_name": "PVC Coupling 110mm",
+    "part_number": "PP-CPL-110",
+    "description": "Slip-fit PVC coupling for joining two 110mm pipe ends. Used to repair cracked or leaking sections after cutting out the damaged length.",
+    "keywords": [
+      "pipe",
+      "pvc",
+      "leak",
+      "crack",
+      "coupling",
+      "joint",
+      "repair"
+    ],
+    "unit_price_usd": 4.9,
+    "in_stock": 100
+  },
+  {
+    "id": "PP-006",
+    "asset_type": "Piping",
+    "part_name": "PVC 90\u00b0 Elbow 110mm",
+    "part_number": "PP-ELB-110",
+    "description": "90-degree PVC elbow for 110mm pipe runs. Replace cracked or leaking corner fittings.",
+    "keywords": [
+      "pipe",
+      "pvc",
+      "elbow",
+      "corner",
+      "leak at bend",
+      "fitting"
+    ],
+    "unit_price_usd": 5.75,
+    "in_stock": 80
+  },
+  {
+    "id": "PP-007",
+    "asset_type": "Piping",
+    "part_name": "PVC Coupling 160mm",
+    "part_number": "PP-CPL-160",
+    "description": "Slip-fit PVC coupling for joining two 160mm pipe ends. Used to repair cracked or leaking sections after cutting out the damaged length.",
+    "keywords": [
+      "pipe",
+      "pvc",
+      "leak",
+      "crack",
+      "coupling",
+      "joint",
+      "repair"
+    ],
+    "unit_price_usd": 6.4,
+    "in_stock": 100
+  },
+  {
+    "id": "PP-008",
+    "asset_type": "Piping",
+    "part_name": "PVC 90\u00b0 Elbow 160mm",
+    "part_number": "PP-ELB-160",
+    "description": "90-degree PVC elbow for 160mm pipe runs. Replace cracked or leaking corner fittings.",
+    "keywords": [
+      "pipe",
+      "pvc",
+      "elbow",
+      "corner",
+      "leak at bend",
+      "fitting"
+    ],
+    "unit_price_usd": 7.5,
+    "in_stock": 80
+  },
+  {
+    "id": "PP-009",
+    "asset_type": "Piping",
+    "part_name": "PVC Coupling 200mm",
+    "part_number": "PP-CPL-200",
+    "description": "Slip-fit PVC coupling for joining two 200mm pipe ends. Used to repair cracked or leaking sections after cutting out the damaged length.",
+    "keywords": [
+      "pipe",
+      "pvc",
+      "leak",
+      "crack",
+      "coupling",
+      "joint",
+      "repair"
+    ],
+    "unit_price_usd": 7.6,
+    "in_stock": 100
+  },
+  {
+    "id": "PP-010",
+    "asset_type": "Piping",
+    "part_name": "PVC 90\u00b0 Elbow 200mm",
+    "part_number": "PP-ELB-200",
+    "description": "90-degree PVC elbow for 200mm pipe runs. Replace cracked or leaking corner fittings.",
+    "keywords": [
+      "pipe",
+      "pvc",
+      "elbow",
+      "corner",
+      "leak at bend",
+      "fitting"
+    ],
+    "unit_price_usd": 8.9,
+    "in_stock": 80
+  },
+  {
+    "id": "PP-011",
+    "asset_type": "Piping",
+    "part_name": "Galvanized Steel Elbow 90\u00b0 (1 inch)",
+    "part_number": "PP-ELBG-1",
+    "description": "90-degree threaded galvanized elbow for 1-inch steel pipe. Replace when corroded or seized.",
+    "keywords": [
+      "pipe",
+      "steel",
+      "elbow",
+      "rust",
+      "corroded",
+      "threaded fitting"
+    ],
+    "unit_price_usd": 6.300000000000001,
+    "in_stock": 60
+  },
+  {
+    "id": "PP-012",
+    "asset_type": "Piping",
+    "part_name": "Pipe Support Clamp with Rubber Liner (1 inch)",
+    "part_number": "PP-CLMP-1",
+    "description": "Wall/ceiling pipe clamp with rubber insulation liner for 1-inch pipe. Replaces broken brackets on sagging or vibrating runs.",
+    "keywords": [
+      "pipe",
+      "clamp",
+      "bracket",
+      "sagging",
+      "loose pipe",
+      "support",
+      "vibration"
+    ],
+    "unit_price_usd": 2.2,
+    "in_stock": 150
+  },
+  {
+    "id": "PP-013",
+    "asset_type": "Piping",
+    "part_name": "Galvanized Steel Elbow 90\u00b0 (2 inch)",
+    "part_number": "PP-ELBG-2",
+    "description": "90-degree threaded galvanized elbow for 2-inch steel pipe. Replace when corroded or seized.",
+    "keywords": [
+      "pipe",
+      "steel",
+      "elbow",
+      "rust",
+      "corroded",
+      "threaded fitting"
+    ],
+    "unit_price_usd": 8.4,
+    "in_stock": 60
+  },
+  {
+    "id": "PP-014",
+    "asset_type": "Piping",
+    "part_name": "Pipe Support Clamp with Rubber Liner (2 inch)",
+    "part_number": "PP-CLMP-2",
+    "description": "Wall/ceiling pipe clamp with rubber insulation liner for 2-inch pipe. Replaces broken brackets on sagging or vibrating runs.",
+    "keywords": [
+      "pipe",
+      "clamp",
+      "bracket",
+      "sagging",
+      "loose pipe",
+      "support",
+      "vibration"
+    ],
+    "unit_price_usd": 3.0,
+    "in_stock": 150
+  },
+  {
+    "id": "PP-015",
+    "asset_type": "Piping",
+    "part_name": "Galvanized Steel Elbow 90\u00b0 (3 inch)",
+    "part_number": "PP-ELBG-3",
+    "description": "90-degree threaded galvanized elbow for 3-inch steel pipe. Replace when corroded or seized.",
+    "keywords": [
+      "pipe",
+      "steel",
+      "elbow",
+      "rust",
+      "corroded",
+      "threaded fitting"
+    ],
+    "unit_price_usd": 10.5,
+    "in_stock": 60
+  },
+  {
+    "id": "PP-016",
+    "asset_type": "Piping",
+    "part_name": "Pipe Support Clamp with Rubber Liner (3 inch)",
+    "part_number": "PP-CLMP-3",
+    "description": "Wall/ceiling pipe clamp with rubber insulation liner for 3-inch pipe. Replaces broken brackets on sagging or vibrating runs.",
+    "keywords": [
+      "pipe",
+      "clamp",
+      "bracket",
+      "sagging",
+      "loose pipe",
+      "support",
+      "vibration"
+    ],
+    "unit_price_usd": 3.8000000000000003,
+    "in_stock": 150
+  },
+  {
+    "id": "PP-017",
+    "asset_type": "Piping",
+    "part_name": "Repair Clamp Stainless 110mm x 200mm",
+    "part_number": "PP-RCL-110",
+    "description": "Full-circle stainless repair clamp sealing longitudinal cracks and pinholes on 110mm pipe without cutting.",
+    "keywords": [
+      "pipe",
+      "repair clamp",
+      "pinhole",
+      "spray leak",
+      "burst",
+      "emergency repair"
+    ],
+    "unit_price_usd": 24.0,
+    "in_stock": 30
+  },
+  {
+    "id": "PP-018",
+    "asset_type": "Piping",
+    "part_name": "Gate Valve Brass 2 inch",
+    "part_number": "PP-GV-2",
+    "description": "Full-bore brass gate valve, 2-inch threaded, for isolation on distribution lines. Replace seized or weeping valves.",
+    "keywords": [
+      "pipe",
+      "valve",
+      "gate valve",
+      "won't close",
+      "seized",
+      "weeping",
+      "shutoff"
+    ],
+    "unit_price_usd": 28.5,
+    "in_stock": 25
+  },
+  {
+    "id": "PP-019",
+    "asset_type": "Piping",
+    "part_name": "Valve Box Cover Cast Iron",
+    "part_number": "PP-VBC-1",
+    "description": "Cast iron surface cover for buried valve access boxes. Replace cracked or missing covers in footways.",
+    "keywords": [
+      "valve box",
+      "cover",
+      "cracked",
+      "missing lid",
+      "buried valve"
+    ],
+    "unit_price_usd": 19.0,
+    "in_stock": 35
+  },
+  {
+    "id": "PP-020",
+    "asset_type": "Piping",
+    "part_name": "Pipe Insulation Sleeve 2 inch x 1m",
+    "part_number": "PP-INS-2",
+    "description": "Closed-cell foam insulation sleeve for 2-inch exposed pipework. Replace weathered, torn, or waterlogged lagging.",
+    "keywords": [
+      "pipe",
+      "insulation",
+      "lagging",
+      "torn foam",
+      "frost protection",
+      "condensation"
+    ],
+    "unit_price_usd": 3.2,
+    "in_stock": 90
+  },
+  {
+    "id": "HY-001",
+    "asset_type": "Fire hydrant",
+    "part_name": "Hydrant Nozzle Cap with Chain",
+    "part_number": "HY-CAP-N",
+    "description": "Cast-iron replacement cap for hydrant side nozzle, supplied with retaining chain. Replace when missing or cross-threaded.",
+    "keywords": [
+      "fire hydrant",
+      "cap",
+      "missing cap",
+      "chain",
+      "nozzle",
+      "stolen cap"
+    ],
+    "unit_price_usd": 26.5,
+    "in_stock": 22
+  },
+  {
+    "id": "HY-002",
+    "asset_type": "Fire hydrant",
+    "part_name": "Hydrant Pumper Cap 4.5 inch",
+    "part_number": "HY-CAP-P",
+    "description": "Large-diameter cast-iron cap for the front pumper connection with gasket and chain.",
+    "keywords": [
+      "fire hydrant",
+      "pumper cap",
+      "front cap",
+      "large cap",
+      "missing"
+    ],
+    "unit_price_usd": 34.0,
+    "in_stock": 15
+  },
+  {
+    "id": "HY-003",
+    "asset_type": "Fire hydrant",
+    "part_name": "Operating Nut and Weather Cap",
+    "part_number": "HY-NUT-P5",
+    "description": "Pentagon operating nut with weather cap for hydrant stem. Replace rounded-off or seized nuts.",
+    "keywords": [
+      "fire hydrant",
+      "operating nut",
+      "rounded",
+      "seized",
+      "won't open",
+      "stem"
+    ],
+    "unit_price_usd": 21.0,
+    "in_stock": 18
+  },
+  {
+    "id": "HY-004",
+    "asset_type": "Fire hydrant",
+    "part_name": "Hydrant Flange Gasket and Bolt Kit",
+    "part_number": "HY-GSK-6",
+    "description": "6-inch flange gasket with stainless bolt set for hydrant base connections. Replace when the base weeps or after knock-over repairs.",
+    "keywords": [
+      "fire hydrant",
+      "gasket",
+      "leaking base",
+      "weeping",
+      "knocked over",
+      "bolts"
+    ],
+    "unit_price_usd": 17.5,
+    "in_stock": 26
+  },
+  {
+    "id": "HY-005",
+    "asset_type": "Water meter",
+    "part_name": "Water Meter Pit Lid 300mm",
+    "part_number": "HY-MPL-300",
+    "description": "Composite lid for domestic water meter pits, 300mm, with reader aperture. Replace cracked or missing lids.",
+    "keywords": [
+      "water meter",
+      "pit lid",
+      "cover",
+      "cracked",
+      "missing",
+      "meter box"
+    ],
+    "unit_price_usd": 15.5,
+    "in_stock": 40
+  },
+  {
+    "id": "RD-001",
+    "asset_type": "Road / drainage",
+    "part_name": "Ductile Iron Manhole Cover 450mm B125",
+    "part_number": "RD-MH-450",
+    "description": "B125-rated ductile iron manhole cover and frame, 450mm clear opening. Replace cracked or rocking covers.",
+    "keywords": [
+      "manhole",
+      "cover",
+      "cracked",
+      "rocking",
+      "missing",
+      "road",
+      "clanging"
+    ],
+    "unit_price_usd": 130.5,
+    "in_stock": 8
+  },
+  {
+    "id": "RD-002",
+    "asset_type": "Road / drainage",
+    "part_name": "Ductile Iron Manhole Cover 600mm D400",
+    "part_number": "RD-MH-600",
+    "description": "D400-rated ductile iron manhole cover and frame, 600mm clear opening. Replace cracked or rocking covers.",
+    "keywords": [
+      "manhole",
+      "cover",
+      "cracked",
+      "rocking",
+      "missing",
+      "road",
+      "clanging"
+    ],
+    "unit_price_usd": 144.0,
+    "in_stock": 8
+  },
+  {
+    "id": "RD-003",
+    "asset_type": "Road / drainage",
+    "part_name": "Gully Drainage Grate 300x300mm",
+    "part_number": "RD-GRT-300",
+    "description": "Cast iron storm drain grate for roadside gullies, 300mm square. Replace when broken, clogged beyond cleaning, or stolen.",
+    "keywords": [
+      "drain",
+      "grate",
+      "storm drain",
+      "gully",
+      "broken grate",
+      "blocked",
+      "stolen"
+    ],
+    "unit_price_usd": 48.0,
+    "in_stock": 15
+  },
+  {
+    "id": "RD-004",
+    "asset_type": "Road / drainage",
+    "part_name": "Gully Drainage Grate 450x450mm",
+    "part_number": "RD-GRT-450",
+    "description": "Cast iron storm drain grate for roadside gullies, 450mm square. Replace when broken, clogged beyond cleaning, or stolen.",
+    "keywords": [
+      "drain",
+      "grate",
+      "storm drain",
+      "gully",
+      "broken grate",
+      "blocked",
+      "stolen"
+    ],
+    "unit_price_usd": 57.0,
+    "in_stock": 15
+  },
+  {
+    "id": "RD-005",
+    "asset_type": "Road / drainage",
+    "part_name": "Gully Drainage Grate 600x600mm",
+    "part_number": "RD-GRT-600",
+    "description": "Cast iron storm drain grate for roadside gullies, 600mm square. Replace when broken, clogged beyond cleaning, or stolen.",
+    "keywords": [
+      "drain",
+      "grate",
+      "storm drain",
+      "gully",
+      "broken grate",
+      "blocked",
+      "stolen"
+    ],
+    "unit_price_usd": 66.0,
+    "in_stock": 15
+  },
+  {
+    "id": "RD-006",
+    "asset_type": "Road / drainage",
+    "part_name": "Kerb Inlet Lintel Precast",
+    "part_number": "RD-KIL-900",
+    "description": "Precast concrete lintel for kerb inlet openings, 900mm. Replace spalled or collapsed inlet mouths.",
+    "keywords": [
+      "kerb inlet",
+      "lintel",
+      "collapsed",
+      "spalled",
+      "drain opening"
+    ],
+    "unit_price_usd": 44.0,
+    "in_stock": 10
+  },
+  {
+    "id": "RD-007",
+    "asset_type": "Road / drainage",
+    "part_name": "Channel Drain Grate Galvanized 1m",
+    "part_number": "RD-CHG-100",
+    "description": "Galvanized slotted grate section for 100mm linear channel drains across driveways and paths.",
+    "keywords": [
+      "channel drain",
+      "grate",
+      "linear drain",
+      "bent grate",
+      "missing section"
+    ],
+    "unit_price_usd": 22.0,
+    "in_stock": 28
+  },
+  {
+    "id": "RD-008",
+    "asset_type": "Road",
+    "part_name": "Flexible Delineator Post with Base",
+    "part_number": "RD-DEL-750",
+    "description": "750mm orange flexible delineator post with reboundable base and reflective bands. Replace snapped or faded posts.",
+    "keywords": [
+      "delineator",
+      "flexible post",
+      "bollard",
+      "snapped",
+      "run over",
+      "faded"
+    ],
+    "unit_price_usd": 18.0,
+    "in_stock": 60
+  },
+  {
+    "id": "RD-009",
+    "asset_type": "Road",
+    "part_name": "Raised Pavement Marker Reflective (pack of 10)",
+    "part_number": "RD-RPM-10",
+    "description": "Ceramic-base reflective road studs, pack of 10, with adhesive pads. Replace missing or crushed lane markers.",
+    "keywords": [
+      "road stud",
+      "cat eye",
+      "pavement marker",
+      "missing",
+      "crushed",
+      "lane marking"
+    ],
+    "unit_price_usd": 26.0,
+    "in_stock": 45
+  },
+  {
+    "id": "RD-010",
+    "asset_type": "Road",
+    "part_name": "Speed Hump Rubber Section with Fixings",
+    "part_number": "RD-HUMP-50",
+    "description": "500mm modular rubber speed hump section with anchor bolts and reflective inserts. Replace cracked or lifted sections.",
+    "keywords": [
+      "speed hump",
+      "speed bump",
+      "cracked",
+      "lifted",
+      "loose section"
+    ],
+    "unit_price_usd": 39.0,
+    "in_stock": 20
+  },
+  {
+    "id": "SG-001",
+    "asset_type": "Signage",
+    "part_name": "Reflective Sign Panel - Stop (750mm)",
+    "part_number": "SG-STOP-750",
+    "description": "High-intensity retroreflective aluminium Stop sign panel, 750mm octagon, pre-drilled. Replace faded, bent, or graffitied panels.",
+    "keywords": [
+      "sign",
+      "stop sign",
+      "faded",
+      "bent",
+      "graffiti",
+      "panel",
+      "reflective"
+    ],
+    "unit_price_usd": 42.0,
+    "in_stock": 25
+  },
+  {
+    "id": "SG-002",
+    "asset_type": "Signage",
+    "part_name": "Reflective Sign Panel - Yield (750mm)",
+    "part_number": "SG-YIELD-750",
+    "description": "High-intensity retroreflective aluminium Yield sign panel, 750mm triangle, pre-drilled. Replace faded, bent, or graffitied panels.",
+    "keywords": [
+      "sign",
+      "yield sign",
+      "faded",
+      "bent",
+      "graffiti",
+      "panel",
+      "reflective"
+    ],
+    "unit_price_usd": 42.0,
+    "in_stock": 25
+  },
+  {
+    "id": "SG-003",
+    "asset_type": "Signage",
+    "part_name": "Reflective Sign Panel - No Entry (750mm)",
+    "part_number": "SG-NOENT-750",
+    "description": "High-intensity retroreflective aluminium No Entry sign panel, 750mm circle, pre-drilled. Replace faded, bent, or graffitied panels.",
+    "keywords": [
+      "sign",
+      "no entry sign",
+      "faded",
+      "bent",
+      "graffiti",
+      "panel",
+      "reflective"
+    ],
+    "unit_price_usd": 42.0,
+    "in_stock": 25
+  },
+  {
+    "id": "SG-004",
+    "asset_type": "Signage",
+    "part_name": "Speed Limit Sign Panel 30 km/h (600mm)",
+    "part_number": "SG-SPD-30",
+    "description": "Retroreflective circular speed limit panel, 30 km/h, 600mm. Replace faded or vandalized panels.",
+    "keywords": [
+      "sign",
+      "speed limit",
+      "faded",
+      "vandalized",
+      "panel"
+    ],
+    "unit_price_usd": 36.0,
+    "in_stock": 18
+  },
+  {
+    "id": "SG-005",
+    "asset_type": "Signage",
+    "part_name": "Speed Limit Sign Panel 50 km/h (600mm)",
+    "part_number": "SG-SPD-50",
+    "description": "Retroreflective circular speed limit panel, 50 km/h, 600mm. Replace faded or vandalized panels.",
+    "keywords": [
+      "sign",
+      "speed limit",
+      "faded",
+      "vandalized",
+      "panel"
+    ],
+    "unit_price_usd": 36.0,
+    "in_stock": 18
+  },
+  {
+    "id": "SG-006",
+    "asset_type": "Signage",
+    "part_name": "Speed Limit Sign Panel 60 km/h (600mm)",
+    "part_number": "SG-SPD-60",
+    "description": "Retroreflective circular speed limit panel, 60 km/h, 600mm. Replace faded or vandalized panels.",
+    "keywords": [
+      "sign",
+      "speed limit",
+      "faded",
+      "vandalized",
+      "panel"
+    ],
+    "unit_price_usd": 36.0,
+    "in_stock": 18
+  },
+  {
+    "id": "SG-007",
+    "asset_type": "Signage",
+    "part_name": "Speed Limit Sign Panel 80 km/h (600mm)",
+    "part_number": "SG-SPD-80",
+    "description": "Retroreflective circular speed limit panel, 80 km/h, 600mm. Replace faded or vandalized panels.",
+    "keywords": [
+      "sign",
+      "speed limit",
+      "faded",
+      "vandalized",
+      "panel"
+    ],
+    "unit_price_usd": 36.0,
+    "in_stock": 18
+  },
+  {
+    "id": "SG-008",
+    "asset_type": "Signage",
+    "part_name": "Sign Post Mounting Bracket Set",
+    "part_number": "SG-BRKT-U",
+    "description": "Pair of universal U-channel brackets with bolts for fixing sign panels to posts. Replace stripped or corroded fixings.",
+    "keywords": [
+      "sign",
+      "bracket",
+      "loose sign",
+      "bolts",
+      "mounting",
+      "stripped"
+    ],
+    "unit_price_usd": 6.9,
+    "in_stock": 90
+  },
+  {
+    "id": "SG-009",
+    "asset_type": "Signage",
+    "part_name": "Sign Post Galvanized 76mm x 3.5m",
+    "part_number": "SG-POST-35",
+    "description": "Galvanized steel sign post, 76mm diameter, 3.5m. Replace bent or corroded posts after vehicle strikes.",
+    "keywords": [
+      "sign post",
+      "bent post",
+      "knocked down",
+      "vehicle strike",
+      "leaning"
+    ],
+    "unit_price_usd": 52.0,
+    "in_stock": 14
+  },
+  {
+    "id": "SG-010",
+    "asset_type": "Signage",
+    "part_name": "Anti-Rotation Post Clamp",
+    "part_number": "SG-ARC-76",
+    "description": "Clamp collar preventing sign panels rotating on 76mm posts. Replace when signs spin out of alignment.",
+    "keywords": [
+      "sign",
+      "rotated",
+      "spinning sign",
+      "clamp",
+      "misaligned"
+    ],
+    "unit_price_usd": 8.4,
+    "in_stock": 55
+  },
+  {
+    "id": "SG-011",
+    "asset_type": "Street nameplate",
+    "part_name": "Street Nameplate Blank with Rails",
+    "part_number": "SG-SNP-900",
+    "description": "900mm aluminium street nameplate blank with mounting rails, ready for vinyl lettering. Replace cracked or illegible plates.",
+    "keywords": [
+      "street name",
+      "nameplate",
+      "illegible",
+      "cracked",
+      "faded lettering"
+    ],
+    "unit_price_usd": 29.0,
+    "in_stock": 20
+  },
+  {
+    "id": "PF-001",
+    "asset_type": "Street furniture",
+    "part_name": "Hardwood Bench Slat 1200mm",
+    "part_number": "PF-SLAT-12",
+    "description": "Pre-drilled treated hardwood slat, 1200mm, for standard park bench frames. Replace split, rotten, or vandalized slats.",
+    "keywords": [
+      "bench",
+      "slat",
+      "broken plank",
+      "park bench",
+      "wood",
+      "split",
+      "rotten"
+    ],
+    "unit_price_usd": 19.2,
+    "in_stock": 40
+  },
+  {
+    "id": "PF-002",
+    "asset_type": "Street furniture",
+    "part_name": "Hardwood Bench Slat 1500mm",
+    "part_number": "PF-SLAT-15",
+    "description": "Pre-drilled treated hardwood slat, 1500mm, for standard park bench frames. Replace split, rotten, or vandalized slats.",
+    "keywords": [
+      "bench",
+      "slat",
+      "broken plank",
+      "park bench",
+      "wood",
+      "split",
+      "rotten"
+    ],
+    "unit_price_usd": 21.0,
+    "in_stock": 40
+  },
+  {
+    "id": "PF-003",
+    "asset_type": "Street furniture",
+    "part_name": "Hardwood Bench Slat 1800mm",
+    "part_number": "PF-SLAT-18",
+    "description": "Pre-drilled treated hardwood slat, 1800mm, for standard park bench frames. Replace split, rotten, or vandalized slats.",
+    "keywords": [
+      "bench",
+      "slat",
+      "broken plank",
+      "park bench",
+      "wood",
+      "split",
+      "rotten"
+    ],
+    "unit_price_usd": 22.8,
+    "in_stock": 40
+  },
+  {
+    "id": "PF-004",
+    "asset_type": "Street furniture",
+    "part_name": "Bench Slat Fixing Kit Stainless",
+    "part_number": "PF-FIX-B",
+    "description": "Stainless coach bolts, washers, and cap nuts for fixing bench slats to cast frames.",
+    "keywords": [
+      "bench",
+      "bolts",
+      "loose slat",
+      "fixings",
+      "rusted bolts"
+    ],
+    "unit_price_usd": 5.5,
+    "in_stock": 70
+  },
+  {
+    "id": "PF-005",
+    "asset_type": "Street furniture",
+    "part_name": "Litter Bin Liner Galvanized 90L",
+    "part_number": "PF-BIN-90",
+    "description": "Galvanized steel inner liner for 90L street litter bins. Replace burnt, holed, or corroded liners.",
+    "keywords": [
+      "litter bin",
+      "trash can",
+      "liner",
+      "burnt",
+      "holed",
+      "corroded"
+    ],
+    "unit_price_usd": 33.0,
+    "in_stock": 24
+  },
+  {
+    "id": "PF-006",
+    "asset_type": "Street furniture",
+    "part_name": "Litter Bin Door Hinge and Lock Kit",
+    "part_number": "PF-BINLK",
+    "description": "Hinge pair with triangular-key lock for pedestal litter bin doors. Replace when doors hang or won't latch.",
+    "keywords": [
+      "litter bin",
+      "door",
+      "hinge",
+      "won't close",
+      "lock",
+      "hanging door"
+    ],
+    "unit_price_usd": 12.0,
+    "in_stock": 30
+  },
+  {
+    "id": "PF-007",
+    "asset_type": "Street furniture",
+    "part_name": "Steel Bollard Removable with Ground Sleeve",
+    "part_number": "PF-BOL-RM",
+    "description": "Removable 90mm steel bollard with lockable ground sleeve. Replace bent or sheared bollards after impacts.",
+    "keywords": [
+      "bollard",
+      "bent",
+      "hit by car",
+      "sheared",
+      "removable post"
+    ],
+    "unit_price_usd": 88.0,
+    "in_stock": 12
+  },
+  {
+    "id": "PF-008",
+    "asset_type": "Street furniture",
+    "part_name": "Cycle Stand Sheffield Galvanized",
+    "part_number": "PF-CYC-SH",
+    "description": "Galvanized Sheffield-pattern cycle stand with root-fix legs. Replace bent or corroded stands.",
+    "keywords": [
+      "bike rack",
+      "cycle stand",
+      "bent",
+      "corroded",
+      "loose"
+    ],
+    "unit_price_usd": 46.0,
+    "in_stock": 16
+  },
+  {
+    "id": "PF-009",
+    "asset_type": "Bus stop",
+    "part_name": "Bus Shelter Glazing Panel Toughened 1100x1400",
+    "part_number": "PF-BSG-11",
+    "description": "Toughened safety glass panel for bus shelter side bays, 1100x1400mm, with edge gaskets. Replace shattered or cracked panels.",
+    "keywords": [
+      "bus shelter",
+      "glass",
+      "shattered",
+      "cracked panel",
+      "smashed",
+      "glazing"
+    ],
+    "unit_price_usd": 74.0,
+    "in_stock": 10
+  },
+  {
+    "id": "PF-010",
+    "asset_type": "Bus stop",
+    "part_name": "Bus Stop Flag Sign Double-Sided",
+    "part_number": "PF-BSF-DS",
+    "description": "Double-sided bus stop flag sign with pole clamp band. Replace faded or broken flags.",
+    "keywords": [
+      "bus stop",
+      "flag",
+      "sign",
+      "faded",
+      "broken"
+    ],
+    "unit_price_usd": 27.0,
+    "in_stock": 18
+  },
+  {
+    "id": "FB-001",
+    "asset_type": "Fencing",
+    "part_name": "Chain-Link Fence Mesh Roll 1.8m x 15m",
+    "part_number": "FB-CLM-18",
+    "description": "Galvanized chain-link mesh roll for repairing cut or rusted fence sections, 1.8m high.",
+    "keywords": [
+      "fence",
+      "chain link",
+      "cut fence",
+      "hole in fence",
+      "rusted mesh"
+    ],
+    "unit_price_usd": 96.0,
+    "in_stock": 8
+  },
+  {
+    "id": "FB-002",
+    "asset_type": "Fencing",
+    "part_name": "Fence Line Post Galvanized 2.4m",
+    "part_number": "FB-LP-24",
+    "description": "Galvanized intermediate line post for 1.8m chain-link fencing, with cap.",
+    "keywords": [
+      "fence",
+      "post",
+      "leaning post",
+      "bent",
+      "broken post"
+    ],
+    "unit_price_usd": 21.0,
+    "in_stock": 30
+  },
+  {
+    "id": "FB-003",
+    "asset_type": "Fencing",
+    "part_name": "Gate Hinge Set Heavy Duty Adjustable",
+    "part_number": "FB-GH-HD",
+    "description": "Adjustable heavy-duty hinge pair for swing gates up to 75kg. Replace sagging or seized hinges.",
+    "keywords": [
+      "gate",
+      "hinge",
+      "sagging gate",
+      "won't swing",
+      "seized",
+      "dragging"
+    ],
+    "unit_price_usd": 18.5,
+    "in_stock": 26
+  },
+  {
+    "id": "FB-004",
+    "asset_type": "Fencing",
+    "part_name": "Gate Drop Bolt and Keeper",
+    "part_number": "FB-DB-450",
+    "description": "450mm drop bolt with ground keeper for double gates. Replace bent bolts or missing keepers.",
+    "keywords": [
+      "gate",
+      "drop bolt",
+      "won't lock",
+      "bent bolt",
+      "keeper"
+    ],
+    "unit_price_usd": 13.0,
+    "in_stock": 34
+  },
+  {
+    "id": "FB-005",
+    "asset_type": "Guardrail",
+    "part_name": "W-Beam Guardrail Panel 3.2m Galvanized",
+    "part_number": "FB-WB-32",
+    "description": "Standard 3.2m galvanized W-beam guardrail panel with splice hardware. Replace impact-damaged sections.",
+    "keywords": [
+      "guardrail",
+      "crash barrier",
+      "dented",
+      "impact damage",
+      "w-beam"
+    ],
+    "unit_price_usd": 118.0,
+    "in_stock": 6
+  },
+  {
+    "id": "FB-006",
+    "asset_type": "Guardrail",
+    "part_name": "Guardrail Post and Blockout Set",
+    "part_number": "FB-GP-SET",
+    "description": "Galvanized guardrail post with composite blockout and bolts. Replace posts bent in collisions.",
+    "keywords": [
+      "guardrail",
+      "post",
+      "bent post",
+      "collision",
+      "blockout"
+    ],
+    "unit_price_usd": 64.0,
+    "in_stock": 10
+  },
+  {
+    "id": "EL-001",
+    "asset_type": "Feeder pillar",
+    "part_name": "Feeder Pillar Door with Lock GRP",
+    "part_number": "EL-FPD-1",
+    "description": "GRP replacement door with tri-head lock for roadside electrical feeder pillars. Replace vandalized or corroded doors.",
+    "keywords": [
+      "feeder pillar",
+      "electrical box",
+      "door",
+      "vandalized",
+      "open cabinet",
+      "exposed"
+    ],
+    "unit_price_usd": 89.0,
+    "in_stock": 8
+  },
+  {
+    "id": "EL-002",
+    "asset_type": "Feeder pillar",
+    "part_name": "DIN Rail MCB 16A Type C",
+    "part_number": "EL-MCB-16",
+    "description": "16A Type C miniature circuit breaker for feeder pillar distribution. Replace tripped-and-failed or heat-damaged breakers.",
+    "keywords": [
+      "breaker",
+      "mcb",
+      "tripped",
+      "no power",
+      "feeder pillar",
+      "burnt"
+    ],
+    "unit_price_usd": 7.9,
+    "in_stock": 60
+  },
+  {
+    "id": "EL-003",
+    "asset_type": "CCTV",
+    "part_name": "CCTV Camera Dome Cover Polycarbonate",
+    "part_number": "EL-CAM-DC",
+    "description": "Clear polycarbonate dome for street CCTV cameras. Replace scratched, crazed, or spray-painted domes.",
+    "keywords": [
+      "cctv",
+      "camera",
+      "dome",
+      "scratched",
+      "spray painted",
+      "cloudy"
+    ],
+    "unit_price_usd": 24.0,
+    "in_stock": 14
+  },
+  {
+    "id": "EL-004",
+    "asset_type": "EV charging",
+    "part_name": "EV Charge Point Cable Holster",
+    "part_number": "EL-EVH-T2",
+    "description": "Replacement Type 2 cable holster/dock for public EV charge points. Replace cracked or torn-off holsters.",
+    "keywords": [
+      "ev charger",
+      "holster",
+      "cable dock",
+      "cracked",
+      "torn off",
+      "hanging cable"
+    ],
+    "unit_price_usd": 19.5,
+    "in_stock": 22
+  },
+  {
+    "id": "EL-005",
+    "asset_type": "EV charging",
+    "part_name": "EV Charge Point RFID Front Panel",
+    "part_number": "EL-EVP-RF",
+    "description": "Front fascia panel with RFID window for kerbside EV charge points. Replace vandalized or delaminated panels.",
+    "keywords": [
+      "ev charger",
+      "front panel",
+      "screen",
+      "vandalized",
+      "delaminated"
+    ],
+    "unit_price_usd": 57.0,
+    "in_stock": 9
+  },
+  {
+    "id": "PP-021",
+    "asset_type": "Piping",
+    "part_name": "PVC Equal Tee 50mm",
+    "part_number": "PP-TEE-50",
+    "description": "Equal tee junction for 50mm PVC pipe branches. Replace cracked or leaking branch fittings.",
+    "keywords": [
+      "pipe",
+      "pvc",
+      "tee",
+      "junction",
+      "branch",
+      "leak"
+    ],
+    "unit_price_usd": 4.4,
+    "in_stock": 60
+  },
+  {
+    "id": "PP-022",
+    "asset_type": "Piping",
+    "part_name": "PVC End Cap 50mm",
+    "part_number": "PP-CAP-50",
+    "description": "Push-fit end cap sealing 50mm PVC pipe terminations. Replace missing or split caps.",
+    "keywords": [
+      "pipe",
+      "pvc",
+      "end cap",
+      "open pipe",
+      "missing cap",
+      "split"
+    ],
+    "unit_price_usd": 2.1,
+    "in_stock": 90
+  },
+  {
+    "id": "PP-023",
+    "asset_type": "Piping",
+    "part_name": "PVC Equal Tee 75mm",
+    "part_number": "PP-TEE-75",
+    "description": "Equal tee junction for 75mm PVC pipe branches. Replace cracked or leaking branch fittings.",
+    "keywords": [
+      "pipe",
+      "pvc",
+      "tee",
+      "junction",
+      "branch",
+      "leak"
+    ],
+    "unit_price_usd": 5.4,
+    "in_stock": 60
+  },
+  {
+    "id": "PP-024",
+    "asset_type": "Piping",
+    "part_name": "PVC End Cap 75mm",
+    "part_number": "PP-CAP-75",
+    "description": "Push-fit end cap sealing 75mm PVC pipe terminations. Replace missing or split caps.",
+    "keywords": [
+      "pipe",
+      "pvc",
+      "end cap",
+      "open pipe",
+      "missing cap",
+      "split"
+    ],
+    "unit_price_usd": 2.6,
+    "in_stock": 90
+  },
+  {
+    "id": "PP-025",
+    "asset_type": "Piping",
+    "part_name": "PVC Equal Tee 110mm",
+    "part_number": "PP-TEE-110",
+    "description": "Equal tee junction for 110mm PVC pipe branches. Replace cracked or leaking branch fittings.",
+    "keywords": [
+      "pipe",
+      "pvc",
+      "tee",
+      "junction",
+      "branch",
+      "leak"
+    ],
+    "unit_price_usd": 6.800000000000001,
+    "in_stock": 60
+  },
+  {
+    "id": "PP-026",
+    "asset_type": "Piping",
+    "part_name": "PVC End Cap 110mm",
+    "part_number": "PP-CAP-110",
+    "description": "Push-fit end cap sealing 110mm PVC pipe terminations. Replace missing or split caps.",
+    "keywords": [
+      "pipe",
+      "pvc",
+      "end cap",
+      "open pipe",
+      "missing cap",
+      "split"
+    ],
+    "unit_price_usd": 3.3000000000000003,
+    "in_stock": 90
+  },
+  {
+    "id": "PP-027",
+    "asset_type": "Piping",
+    "part_name": "PVC Equal Tee 160mm",
+    "part_number": "PP-TEE-160",
+    "description": "Equal tee junction for 160mm PVC pipe branches. Replace cracked or leaking branch fittings.",
+    "keywords": [
+      "pipe",
+      "pvc",
+      "tee",
+      "junction",
+      "branch",
+      "leak"
+    ],
+    "unit_price_usd": 8.8,
+    "in_stock": 60
+  },
+  {
+    "id": "PP-028",
+    "asset_type": "Piping",
+    "part_name": "PVC End Cap 160mm",
+    "part_number": "PP-CAP-160",
+    "description": "Push-fit end cap sealing 160mm PVC pipe terminations. Replace missing or split caps.",
+    "keywords": [
+      "pipe",
+      "pvc",
+      "end cap",
+      "open pipe",
+      "missing cap",
+      "split"
+    ],
+    "unit_price_usd": 4.300000000000001,
+    "in_stock": 90
+  },
+  {
+    "id": "PP-029",
+    "asset_type": "Piping",
+    "part_name": "PVC Equal Tee 200mm",
+    "part_number": "PP-TEE-200",
+    "description": "Equal tee junction for 200mm PVC pipe branches. Replace cracked or leaking branch fittings.",
+    "keywords": [
+      "pipe",
+      "pvc",
+      "tee",
+      "junction",
+      "branch",
+      "leak"
+    ],
+    "unit_price_usd": 10.4,
+    "in_stock": 60
+  },
+  {
+    "id": "PP-030",
+    "asset_type": "Piping",
+    "part_name": "PVC End Cap 200mm",
+    "part_number": "PP-CAP-200",
+    "description": "Push-fit end cap sealing 200mm PVC pipe terminations. Replace missing or split caps.",
+    "keywords": [
+      "pipe",
+      "pvc",
+      "end cap",
+      "open pipe",
+      "missing cap",
+      "split"
+    ],
+    "unit_price_usd": 5.1,
+    "in_stock": 90
+  },
+  {
+    "id": "PP-031",
+    "asset_type": "Piping",
+    "part_name": "PVC Reducer 75mm to 50mm",
+    "part_number": "PP-RED-7550",
+    "description": "Concentric reducer joining 75mm to 50mm PVC pipe. Replace cracked transitions.",
+    "keywords": [
+      "pipe",
+      "pvc",
+      "reducer",
+      "transition",
+      "crack",
+      "different sizes"
+    ],
+    "unit_price_usd": 2.9,
+    "in_stock": 40
+  },
+  {
+    "id": "PP-032",
+    "asset_type": "Piping",
+    "part_name": "PVC Reducer 110mm to 75mm",
+    "part_number": "PP-RED-11075",
+    "description": "Concentric reducer joining 110mm to 75mm PVC pipe. Replace cracked transitions.",
+    "keywords": [
+      "pipe",
+      "pvc",
+      "reducer",
+      "transition",
+      "crack",
+      "different sizes"
+    ],
+    "unit_price_usd": 2.9,
+    "in_stock": 40
+  },
+  {
+    "id": "PP-033",
+    "asset_type": "Piping",
+    "part_name": "PVC Reducer 160mm to 110mm",
+    "part_number": "PP-RED-160110",
+    "description": "Concentric reducer joining 160mm to 110mm PVC pipe. Replace cracked transitions.",
+    "keywords": [
+      "pipe",
+      "pvc",
+      "reducer",
+      "transition",
+      "crack",
+      "different sizes"
+    ],
+    "unit_price_usd": 2.9,
+    "in_stock": 40
+  },
+  {
+    "id": "PP-034",
+    "asset_type": "Piping",
+    "part_name": "PVC Reducer 200mm to 160mm",
+    "part_number": "PP-RED-200160",
+    "description": "Concentric reducer joining 200mm to 160mm PVC pipe. Replace cracked transitions.",
+    "keywords": [
+      "pipe",
+      "pvc",
+      "reducer",
+      "transition",
+      "crack",
+      "different sizes"
+    ],
+    "unit_price_usd": 2.9,
+    "in_stock": 40
+  },
+  {
+    "id": "SL-013",
+    "asset_type": "Streetlight",
+    "part_name": "Steel Lighting Column 5m Galvanized",
+    "part_number": "SL-COL-5",
+    "description": "Galvanized tapered steel lighting column, 5m, with base flange and access door aperture. Replace corroded or vehicle-struck columns.",
+    "keywords": [
+      "streetlight pole",
+      "column",
+      "leaning",
+      "corroded base",
+      "knocked down",
+      "vehicle strike"
+    ],
+    "unit_price_usd": 485.0,
+    "in_stock": 3
+  },
+  {
+    "id": "SL-014",
+    "asset_type": "Streetlight",
+    "part_name": "Steel Lighting Column 6m Galvanized",
+    "part_number": "SL-COL-6",
+    "description": "Galvanized tapered steel lighting column, 6m, with base flange and access door aperture. Replace corroded or vehicle-struck columns.",
+    "keywords": [
+      "streetlight pole",
+      "column",
+      "leaning",
+      "corroded base",
+      "knocked down",
+      "vehicle strike"
+    ],
+    "unit_price_usd": 530.0,
+    "in_stock": 3
+  },
+  {
+    "id": "SL-015",
+    "asset_type": "Streetlight",
+    "part_name": "Steel Lighting Column 8m Galvanized",
+    "part_number": "SL-COL-8",
+    "description": "Galvanized tapered steel lighting column, 8m, with base flange and access door aperture. Replace corroded or vehicle-struck columns.",
+    "keywords": [
+      "streetlight pole",
+      "column",
+      "leaning",
+      "corroded base",
+      "knocked down",
+      "vehicle strike"
+    ],
+    "unit_price_usd": 620.0,
+    "in_stock": 3
+  },
+  {
+    "id": "SL-016",
+    "asset_type": "Streetlight",
+    "part_name": "Steel Lighting Column 10m Galvanized",
+    "part_number": "SL-COL-10",
+    "description": "Galvanized tapered steel lighting column, 10m, with base flange and access door aperture. Replace corroded or vehicle-struck columns.",
+    "keywords": [
+      "streetlight pole",
+      "column",
+      "leaning",
+      "corroded base",
+      "knocked down",
+      "vehicle strike"
+    ],
+    "unit_price_usd": 710.0,
+    "in_stock": 3
+  },
+  {
+    "id": "SG-012",
+    "asset_type": "Signage",
+    "part_name": "Speed Limit Sign Panel 40 km/h (600mm)",
+    "part_number": "SG-SPD-40",
+    "description": "Retroreflective circular speed limit panel, 40 km/h, 600mm. Replace faded or vandalized panels.",
+    "keywords": [
+      "sign",
+      "speed limit",
+      "faded",
+      "vandalized",
+      "panel"
+    ],
+    "unit_price_usd": 36.0,
+    "in_stock": 18
+  },
+  {
+    "id": "SG-013",
+    "asset_type": "Signage",
+    "part_name": "Speed Limit Sign Panel 70 km/h (600mm)",
+    "part_number": "SG-SPD-70",
+    "description": "Retroreflective circular speed limit panel, 70 km/h, 600mm. Replace faded or vandalized panels.",
+    "keywords": [
+      "sign",
+      "speed limit",
+      "faded",
+      "vandalized",
+      "panel"
+    ],
+    "unit_price_usd": 36.0,
+    "in_stock": 18
+  },
+  {
+    "id": "SG-014",
+    "asset_type": "Signage",
+    "part_name": "Speed Limit Sign Panel 100 km/h (600mm)",
+    "part_number": "SG-SPD-100",
+    "description": "Retroreflective circular speed limit panel, 100 km/h, 600mm. Replace faded or vandalized panels.",
+    "keywords": [
+      "sign",
+      "speed limit",
+      "faded",
+      "vandalized",
+      "panel"
+    ],
+    "unit_price_usd": 36.0,
+    "in_stock": 18
+  },
+  {
+    "id": "SG-015",
+    "asset_type": "Signage",
+    "part_name": "Speed Limit Sign Panel 120 km/h (600mm)",
+    "part_number": "SG-SPD-120",
+    "description": "Retroreflective circular speed limit panel, 120 km/h, 600mm. Replace faded or vandalized panels.",
+    "keywords": [
+      "sign",
+      "speed limit",
+      "faded",
+      "vandalized",
+      "panel"
+    ],
+    "unit_price_usd": 36.0,
+    "in_stock": 18
+  },
+  {
+    "id": "SG-016",
+    "asset_type": "Signage",
+    "part_name": "Warning Sign Panel - Pedestrian Crossing Ahead (600mm)",
+    "part_number": "SG-PEDX-600",
+    "description": "Retroreflective aluminium warning panel: Pedestrian Crossing Ahead, 600mm. Replace faded, bent, or missing panels.",
+    "keywords": [
+      "sign",
+      "pedestrian crossing ahead",
+      "warning",
+      "faded",
+      "bent",
+      "missing"
+    ],
+    "unit_price_usd": 38.0,
+    "in_stock": 15
+  },
+  {
+    "id": "SG-017",
+    "asset_type": "Signage",
+    "part_name": "Warning Sign Panel - School Zone (600mm)",
+    "part_number": "SG-SCHL-600",
+    "description": "Retroreflective aluminium warning panel: School Zone, 600mm. Replace faded, bent, or missing panels.",
+    "keywords": [
+      "sign",
+      "school zone",
+      "warning",
+      "faded",
+      "bent",
+      "missing"
+    ],
+    "unit_price_usd": 38.0,
+    "in_stock": 15
+  },
+  {
+    "id": "SG-018",
+    "asset_type": "Signage",
+    "part_name": "Warning Sign Panel - Give Way to Oncoming (600mm)",
+    "part_number": "SG-GWO-600",
+    "description": "Retroreflective aluminium warning panel: Give Way to Oncoming, 600mm. Replace faded, bent, or missing panels.",
+    "keywords": [
+      "sign",
+      "give way to oncoming",
+      "warning",
+      "faded",
+      "bent",
+      "missing"
+    ],
+    "unit_price_usd": 38.0,
+    "in_stock": 15
+  },
+  {
+    "id": "SG-019",
+    "asset_type": "Signage",
+    "part_name": "Warning Sign Panel - No Parking (600mm)",
+    "part_number": "SG-NOPK-600",
+    "description": "Retroreflective aluminium warning panel: No Parking, 600mm. Replace faded, bent, or missing panels.",
+    "keywords": [
+      "sign",
+      "no parking",
+      "warning",
+      "faded",
+      "bent",
+      "missing"
+    ],
+    "unit_price_usd": 38.0,
+    "in_stock": 15
+  },
+  {
+    "id": "RD-011",
+    "asset_type": "Road / drainage",
+    "part_name": "Drainage Pipe Section Twin-Wall 110mm x 3m",
+    "part_number": "RD-TWP-110",
+    "description": "Twin-wall HDPE drainage pipe section, 110mm x 3m, with coupler. Replace crushed or root-blocked runs.",
+    "keywords": [
+      "drain",
+      "drainage pipe",
+      "crushed",
+      "blocked",
+      "root ingress",
+      "culvert"
+    ],
+    "unit_price_usd": 20.8,
+    "in_stock": 20
+  },
+  {
+    "id": "RD-012",
+    "asset_type": "Road / drainage",
+    "part_name": "Drainage Pipe Section Twin-Wall 160mm x 3m",
+    "part_number": "RD-TWP-160",
+    "description": "Twin-wall HDPE drainage pipe section, 160mm x 3m, with coupler. Replace crushed or root-blocked runs.",
+    "keywords": [
+      "drain",
+      "drainage pipe",
+      "crushed",
+      "blocked",
+      "root ingress",
+      "culvert"
+    ],
+    "unit_price_usd": 24.8,
+    "in_stock": 20
+  },
+  {
+    "id": "RD-013",
+    "asset_type": "Road / drainage",
+    "part_name": "Drainage Pipe Section Twin-Wall 225mm x 3m",
+    "part_number": "RD-TWP-225",
+    "description": "Twin-wall HDPE drainage pipe section, 225mm x 3m, with coupler. Replace crushed or root-blocked runs.",
+    "keywords": [
+      "drain",
+      "drainage pipe",
+      "crushed",
+      "blocked",
+      "root ingress",
+      "culvert"
+    ],
+    "unit_price_usd": 30.0,
+    "in_stock": 20
+  },
+  {
+    "id": "RD-014",
+    "asset_type": "Road / drainage",
+    "part_name": "Drainage Pipe Section Twin-Wall 300mm x 3m",
+    "part_number": "RD-TWP-300",
+    "description": "Twin-wall HDPE drainage pipe section, 300mm x 3m, with coupler. Replace crushed or root-blocked runs.",
+    "keywords": [
+      "drain",
+      "drainage pipe",
+      "crushed",
+      "blocked",
+      "root ingress",
+      "culvert"
+    ],
+    "unit_price_usd": 36.0,
+    "in_stock": 20
+  },
+  {
+    "id": "RD-015",
+    "asset_type": "Road / drainage",
+    "part_name": "Gully Pot Precast Concrete 450mm",
+    "part_number": "RD-GPOT-450",
+    "description": "Precast concrete gully pot with trapped outlet, 450mm, for roadside drainage. Replace cracked or collapsed pots.",
+    "keywords": [
+      "gully",
+      "gully pot",
+      "cracked",
+      "collapsed",
+      "sinkhole at drain"
+    ],
+    "unit_price_usd": 58.0,
+    "in_stock": 8
+  },
+  {
+    "id": "RD-016",
+    "asset_type": "Road",
+    "part_name": "Kerbstone Precast HB2 915mm",
+    "part_number": "RD-KERB-HB2",
+    "description": "Standard precast concrete half-battered kerbstone, 915mm. Replace cracked, spalled, or displaced kerbs.",
+    "keywords": [
+      "kerb",
+      "curb",
+      "cracked",
+      "spalled",
+      "displaced",
+      "broken edge"
+    ],
+    "unit_price_usd": 9.5,
+    "in_stock": 120
+  },
+  {
+    "id": "RD-017",
+    "asset_type": "Road",
+    "part_name": "Tactile Paving Slab Blister Red 400mm",
+    "part_number": "RD-TAC-400",
+    "description": "Red blister tactile paving slab, 400x400mm, for crossing points. Replace cracked or lifted slabs.",
+    "keywords": [
+      "tactile paving",
+      "blister slab",
+      "cracked",
+      "lifted",
+      "trip hazard",
+      "crossing"
+    ],
+    "unit_price_usd": 7.8,
+    "in_stock": 100
+  },
+  {
+    "id": "PF-011",
+    "asset_type": "Street furniture",
+    "part_name": "Bench Cast End Frame",
+    "part_number": "PF-FRM-CE",
+    "description": "Cast aluminium bench end frame, pre-drilled for standard slats. Replace cracked or vandalized frames.",
+    "keywords": [
+      "bench",
+      "frame",
+      "cracked",
+      "end support",
+      "cast"
+    ],
+    "unit_price_usd": 61.0,
+    "in_stock": 8
+  },
+  {
+    "id": "PF-012",
+    "asset_type": "Street furniture",
+    "part_name": "Picnic Table Top Recycled Plastic 1800mm",
+    "part_number": "PF-PIC-18",
+    "description": "Recycled plastic plank table top set for 1800mm picnic units. Replace split or burnt tops.",
+    "keywords": [
+      "picnic table",
+      "table top",
+      "split",
+      "burnt",
+      "vandalized"
+    ],
+    "unit_price_usd": 84.0,
+    "in_stock": 6
+  },
+  {
+    "id": "PF-013",
+    "asset_type": "Playground",
+    "part_name": "Swing Seat with Chains Heavy Duty",
+    "part_number": "PF-SWG-HD",
+    "description": "Rubber safety swing seat with galvanized chain set and shackles. Replace cracked seats or worn chains.",
+    "keywords": [
+      "swing",
+      "playground",
+      "seat",
+      "cracked",
+      "worn chain",
+      "broken swing"
+    ],
+    "unit_price_usd": 42.0,
+    "in_stock": 12
+  },
+  {
+    "id": "PF-014",
+    "asset_type": "Playground",
+    "part_name": "Safety Surface Tile Rubber 500mm",
+    "part_number": "PF-SST-500",
+    "description": "Impact-absorbing rubber safety tile, 500x500mm, for playground surfacing. Replace lifted, torn, or missing tiles.",
+    "keywords": [
+      "playground",
+      "rubber tile",
+      "safety surface",
+      "lifted",
+      "torn",
+      "missing tile"
+    ],
+    "unit_price_usd": 11.0,
+    "in_stock": 80
+  }
+]

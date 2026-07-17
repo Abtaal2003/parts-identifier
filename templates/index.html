@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Field Parts Identifier</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@110,500;110,700;110,800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --concrete: #E6E5DF;
+    --ink: #23282C;
+    --slate: #37414A;
+    --amber: #E8A020;
+    --amber-deep: #C77F00;
+    --paper: #FBFAF6;
+    --rust: #B5401F;
+    --ok: #3A7D44;
+    --line: #C9C7BE;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "IBM Plex Mono", monospace;
+    background:
+      repeating-linear-gradient(-45deg, transparent 0 34px, rgba(35,40,44,.03) 34px 36px),
+      var(--concrete);
+    color: var(--ink);
+    min-height: 100vh;
+    padding: 0 16px 64px;
+  }
+  header {
+    max-width: 880px; margin: 0 auto; padding: 28px 0 20px;
+    display: flex; align-items: baseline; justify-content: space-between; gap: 12px;
+    border-bottom: 3px solid var(--ink);
+  }
+  h1 {
+    font-family: "Archivo", sans-serif;
+    font-weight: 800; font-size: clamp(1.5rem, 4vw, 2.2rem);
+    text-transform: uppercase; letter-spacing: .02em;
+  }
+  h1 .tick { color: var(--amber-deep); }
+  .form-id { font-size: .72rem; color: var(--slate); text-align: right; line-height: 1.5; }
+
+  main { max-width: 880px; margin: 0 auto; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 24px; }
+  @media (max-width: 720px) { .grid { grid-template-columns: 1fr; } }
+
+  .field-label {
+    font-family: "Archivo", sans-serif; font-weight: 700; text-transform: uppercase;
+    font-size: .78rem; letter-spacing: .08em; margin-bottom: 8px;
+    display: flex; justify-content: space-between; align-items: baseline;
+  }
+  .field-label small { font-family: "IBM Plex Mono", monospace; font-weight: 400;
+    text-transform: none; letter-spacing: 0; color: var(--slate); font-size: .68rem; }
+
+  /* Photo dropzone */
+  .dropzone {
+    position: relative; border: 2px dashed var(--slate); background: var(--paper);
+    border-radius: 4px; min-height: 260px; display: flex; align-items: center;
+    justify-content: center; text-align: center; cursor: pointer;
+    transition: border-color .15s, background .15s; overflow: hidden;
+  }
+  .dropzone:hover, .dropzone.dragover { border-color: var(--amber-deep); background: #FFF9EE; }
+  .dropzone:focus-visible { outline: 3px solid var(--amber); outline-offset: 2px; }
+  .dz-empty { padding: 24px; color: var(--slate); font-size: .82rem; line-height: 1.7; }
+  .dz-empty strong { display: block; font-family: "Archivo", sans-serif; font-size: .95rem;
+    text-transform: uppercase; letter-spacing: .05em; color: var(--ink); margin-bottom: 6px; }
+  .dropzone img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .dz-hidden { display: none !important; }
+
+  .photo-actions { display: flex; gap: 10px; margin-top: 10px; }
+  .photo-actions button {
+    flex: 1; font-family: "IBM Plex Mono", monospace; font-size: .78rem; font-weight: 600;
+    padding: 9px 0; border-radius: 3px; cursor: pointer; border: 2px solid var(--ink);
+    background: var(--paper); color: var(--ink); transition: background .15s;
+  }
+  .photo-actions button:hover { background: #efece2; }
+  .photo-actions .danger { border-color: var(--rust); color: var(--rust); }
+  .photo-actions .danger:hover { background: #f7e8e2; }
+  .photo-actions button:disabled { opacity: .35; cursor: not-allowed; }
+
+  textarea {
+    width: 100%; min-height: 260px; resize: vertical;
+    font-family: "IBM Plex Mono", monospace; font-size: .88rem; line-height: 1.7;
+    padding: 14px; border: 2px solid var(--slate); border-radius: 4px;
+    background: var(--paper); color: var(--ink);
+  }
+  textarea:focus-visible { outline: 3px solid var(--amber); outline-offset: 2px; border-color: var(--amber-deep); }
+
+  .submit-row { margin-top: 22px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+  #identifyBtn {
+    font-family: "Archivo", sans-serif; font-weight: 800; text-transform: uppercase;
+    letter-spacing: .06em; font-size: 1rem; padding: 14px 34px; cursor: pointer;
+    background: var(--amber); color: var(--ink); border: 2px solid var(--ink);
+    border-radius: 3px; box-shadow: 4px 4px 0 var(--ink); transition: transform .1s, box-shadow .1s;
+  }
+  #identifyBtn:hover { transform: translate(-1px,-1px); box-shadow: 5px 5px 0 var(--ink); }
+  #identifyBtn:active { transform: translate(3px,3px); box-shadow: 1px 1px 0 var(--ink); }
+  #identifyBtn:disabled { opacity: .5; cursor: wait; transform: none; box-shadow: 4px 4px 0 var(--ink); }
+  #identifyBtn:focus-visible { outline: 3px solid var(--slate); outline-offset: 3px; }
+  .status { font-size: .78rem; color: var(--slate); min-height: 1.2em; }
+  .status.err { color: var(--rust); font-weight: 600; }
+
+  /* Result: parts requisition tag */
+  #result { margin-top: 34px; }
+  .tag {
+    position: relative; background: var(--paper); border: 2px solid var(--ink);
+    border-radius: 6px; max-width: 640px; margin: 0 auto;
+    box-shadow: 6px 6px 0 rgba(35,40,44,.18);
+  }
+  .tag::before {  /* punched hole */
+    content: ""; position: absolute; top: 16px; left: 50%; transform: translateX(-50%);
+    width: 18px; height: 18px; border-radius: 50%;
+    background: var(--concrete); border: 2px solid var(--ink);
+  }
+  .tag-head {
+    padding: 46px 24px 14px; text-align: center;
+    border-bottom: 2px dashed var(--line);
+  }
+  .tag-head .stamp {
+    display: inline-block; font-family: "Archivo", sans-serif; font-weight: 800;
+    text-transform: uppercase; letter-spacing: .1em; font-size: .82rem;
+    padding: 6px 18px; border: 2.5px solid currentColor; border-radius: 3px;
+    transform: rotate(-2deg);
+  }
+  .tag.found .stamp { color: var(--ok); }
+  .tag.notfound .stamp { color: var(--rust); }
+  .tag-body { padding: 20px 24px 24px; }
+  .part-name {
+    font-family: "Archivo", sans-serif; font-weight: 800; font-size: 1.25rem;
+    text-transform: uppercase; letter-spacing: .02em; margin-bottom: 4px;
+  }
+  .part-number { color: var(--amber-deep); font-weight: 600; font-size: .9rem; margin-bottom: 16px; }
+  dl { display: grid; grid-template-columns: auto 1fr; gap: 6px 18px; font-size: .82rem; }
+  dt { font-weight: 600; color: var(--slate); text-transform: uppercase; font-size: .68rem; letter-spacing: .06em; padding-top: 2px; }
+  dd { line-height: 1.6; }
+  .msg { margin-top: 16px; padding: 12px 14px; background: #F1EFE7; border-left: 4px solid var(--amber); font-size: .84rem; line-height: 1.7; }
+  .tag.notfound .msg { border-left-color: var(--rust); }
+
+  .spinner { display: inline-block; width: 14px; height: 14px; border: 2px solid var(--slate);
+    border-top-color: transparent; border-radius: 50%; animation: spin .8s linear infinite;
+    vertical-align: -2px; margin-right: 6px; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  @media (prefers-reduced-motion: reduce) {
+    .spinner { animation: none; }
+    #identifyBtn, .dropzone { transition: none; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Field Parts<br />Identifier <span class="tick">▮</span></h1>
+  <div class="form-id">FORM MNT-07<br />REPLACEMENT PART REQUISITION</div>
+</header>
+
+<main>
+  <div class="grid">
+    <section>
+      <div class="field-label">01 · Asset photo <small>JPG / PNG / WebP, max 8 MB</small></div>
+      <div id="dropzone" class="dropzone" tabindex="0" role="button"
+           aria-label="Upload asset photo. Click to browse or drag an image here.">
+        <div class="dz-empty" id="dzEmpty">
+          <strong>Drop photo here</strong>
+          or click to browse from this computer
+        </div>
+        <img id="preview" class="dz-hidden" alt="Selected asset photo preview" />
+      </div>
+      <input type="file" id="fileInput" accept="image/jpeg,image/png,image/webp" hidden />
+      <div class="photo-actions">
+        <button type="button" id="replaceBtn" disabled>Replace photo</button>
+        <button type="button" id="removeBtn" class="danger" disabled>Remove photo</button>
+      </div>
+    </section>
+
+    <section>
+      <div class="field-label">02 · Damage description <small>optional if photo attached</small></div>
+      <textarea id="description" placeholder="e.g. Streetlight on Elm Rd stays lit all day — sensor on top looks scorched."></textarea>
+    </section>
+  </div>
+
+  <div class="submit-row">
+    <button id="identifyBtn" type="button">Identify part</button>
+    <div class="status" id="status" role="status" aria-live="polite"></div>
+  </div>
+
+  <div id="result" aria-live="polite"></div>
+</main>
+
+<script>
+  const dropzone   = document.getElementById("dropzone");
+  const fileInput  = document.getElementById("fileInput");
+  const preview    = document.getElementById("preview");
+  const dzEmpty    = document.getElementById("dzEmpty");
+  const removeBtn  = document.getElementById("removeBtn");
+  const replaceBtn = document.getElementById("replaceBtn");
+  const identify   = document.getElementById("identifyBtn");
+  const statusEl   = document.getElementById("status");
+  const resultEl   = document.getElementById("result");
+  const descEl     = document.getElementById("description");
+
+  let selectedFile = null;
+  let previewURL = null;
+
+  function setFile(file) {
+    if (!file) return;
+    if (!["image/jpeg","image/png","image/webp"].includes(file.type)) {
+      setStatus("That file type is not supported. Use JPG, PNG, or WebP.", true);
+      return;
+    }
+    selectedFile = file;
+    if (previewURL) URL.revokeObjectURL(previewURL);
+    previewURL = URL.createObjectURL(file);
+    preview.src = previewURL;
+    preview.classList.remove("dz-hidden");
+    dzEmpty.classList.add("dz-hidden");
+    removeBtn.disabled = false;
+    replaceBtn.disabled = false;
+    setStatus("Photo attached: " + file.name);
+  }
+
+  function clearFile() {
+    selectedFile = null;
+    fileInput.value = "";
+    if (previewURL) { URL.revokeObjectURL(previewURL); previewURL = null; }
+    preview.classList.add("dz-hidden");
+    preview.removeAttribute("src");
+    dzEmpty.classList.remove("dz-hidden");
+    removeBtn.disabled = true;
+    replaceBtn.disabled = true;
+    setStatus("Photo removed.");
+  }
+
+  function setStatus(text, isError = false) {
+    statusEl.textContent = text;
+    statusEl.className = "status" + (isError ? " err" : "");
+  }
+
+  dropzone.addEventListener("click", () => fileInput.click());
+  dropzone.addEventListener("keydown", e => {
+    if (e.key === "Enter" || e.key === " ") { e.preventDefault(); fileInput.click(); }
+  });
+  replaceBtn.addEventListener("click", () => fileInput.click());
+  removeBtn.addEventListener("click", clearFile);
+  fileInput.addEventListener("change", () => setFile(fileInput.files[0]));
+
+  ["dragover","dragenter"].forEach(ev => dropzone.addEventListener(ev, e => {
+    e.preventDefault(); dropzone.classList.add("dragover");
+  }));
+  ["dragleave","drop"].forEach(ev => dropzone.addEventListener(ev, e => {
+    e.preventDefault(); dropzone.classList.remove("dragover");
+  }));
+  dropzone.addEventListener("drop", e => setFile(e.dataTransfer.files[0]));
+
+  function esc(s) {
+    return String(s ?? "").replace(/[&<>"']/g, c =>
+      ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c]));
+  }
+
+  function candidateList(data) {
+    if (!data.candidates || !data.candidates.length) return "";
+    const rows = data.candidates.map(c =>
+      `<li>${esc(c.id)} · ${esc(c.part_name)} <em>(${Number(c.score).toFixed(3)})</em></li>`).join("");
+    return `<details style="margin-top:12px;font-size:.74rem;color:var(--slate)">
+      <summary style="cursor:pointer">Retrieval top-${data.candidates.length} candidates</summary>
+      <ul style="margin:8px 0 0 18px;line-height:1.8">${rows}</ul></details>`;
+  }
+
+  function renderResult(data) {
+    if (data.match && data.part) {
+      const p = data.part;
+      resultEl.innerHTML = `
+        <div class="tag found">
+          <div class="tag-head"><span class="stamp">Part identified</span></div>
+          <div class="tag-body">
+            <div class="part-name">${esc(p.part_name)}</div>
+            <div class="part-number">PART № ${esc(p.part_number)} · ${esc(p.id)}</div>
+            <dl>
+              <dt>Asset</dt><dd>${esc(data.asset_identified || p.asset_type)}</dd>
+              <dt>Damage</dt><dd>${esc(data.damage_summary)}</dd>
+              <dt>Unit price</dt><dd>$${Number(p.unit_price_usd).toFixed(2)}</dd>
+              <dt>In stock</dt><dd>${esc(p.in_stock)} units</dd>
+              <dt>Confidence</dt><dd>${esc(data.confidence)}</dd>
+              <dt>Reasoning</dt><dd>${esc(data.reasoning)}</dd>
+            </dl>
+            <div class="msg">${esc(data.message)}</div>
+            ${candidateList(data)}
+          </div>
+        </div>`;
+    } else {
+      resultEl.innerHTML = `
+        <div class="tag notfound">
+          <div class="tag-head"><span class="stamp">No catalog match</span></div>
+          <div class="tag-body">
+            <dl>
+              <dt>Identified</dt><dd>${esc(data.asset_identified || "Unrecognized")}</dd>
+              <dt>Notes</dt><dd>${esc(data.reasoning)}</dd>
+            </dl>
+            <div class="msg">${esc(data.message || "No suitable replacement part was found in the catalog. Try a clearer photo or a more specific description.")}</div>
+            ${candidateList(data)}
+          </div>
+        </div>`;
+    }
+  }
+
+  identify.addEventListener("click", async () => {
+    const description = descEl.value.trim();
+    if (!selectedFile && !description) {
+      setStatus("Add a photo, a short description, or both before searching.", true);
+      return;
+    }
+    const fd = new FormData();
+    fd.append("description", description);
+    if (selectedFile) fd.append("image", selectedFile);
+
+    identify.disabled = true;
+    resultEl.innerHTML = "";
+    statusEl.innerHTML = '<span class="spinner"></span>Checking the parts catalog…';
+    statusEl.className = "status";
+
+    try {
+      const ctrl = new AbortController();
+      const t = setTimeout(() => ctrl.abort(), 90000); // 90s hard cap
+      const resp = await fetch("/identify", { method: "POST", body: fd, signal: ctrl.signal });
+      clearTimeout(t);
+      const data = await resp.json();
+      if (!resp.ok) {
+        setStatus(data.detail || data.error || "Something went wrong. Please try again.", true);
+      } else {
+        const secs = data.timings && data.timings.total_ms ? ` (${(data.timings.total_ms/1000).toFixed(1)}s)` : "";
+        setStatus(`Done${secs}. Adjust the photo or description and search again any time.`);
+        renderResult(data);
+      }
+    } catch (err) {
+      if (err.name === "AbortError") {
+        setStatus("Request timed out. Hit Identify part to retry.", true);
+      } else {
+        setStatus("Could not reach the server. Is the app still running?", true);
+      }
+    } finally {
+      identify.disabled = false;
+    }
+  });
+</script>
+</body>
+</html>
