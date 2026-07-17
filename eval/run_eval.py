@@ -1,4 +1,4 @@
-"""Evaluation harness - produces the numbers for your resume.
+"""Evaluation harness for the local retrieval index.
 
 Measures retrieval quality of the local RAG index over 50 labeled test
 queries (no API key or cost needed):

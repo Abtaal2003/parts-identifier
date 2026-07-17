@@ -1,4 +1,4 @@
-"""Generate an expanded mock parts catalog (~300 parts).
+"""Generate the parts catalog (132 parts).
 
 Run once (or after editing) with:  uv run python data/generate_catalog.py
 Writes data/parts_catalog.json. Deterministic - no randomness.

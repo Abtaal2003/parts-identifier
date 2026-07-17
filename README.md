@@ -61,7 +61,7 @@ Open http://127.0.0.1:8000 — stop with Ctrl+C.
 First launch downloads the embedding model and builds the index (a minute or
 two); every launch after that loads from cache in under a second.
 
-## Evaluate (produces your metrics)
+## Evaluate
 ```bash
 uv run python eval/run_eval.py           # retrieval accuracy, free, no API
 uv run python eval/run_eval.py --full    # + end-to-end LLM accuracy (~50 API calls)
