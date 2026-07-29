@@ -59,11 +59,22 @@ class PartsIndex:
             np.save(cache_file, self._embeddings)
         return time.perf_counter() - t0
 
+    @property
+    def is_ready(self) -> bool:
+        """True once embeddings are loaded or computed."""
+        return self._embeddings is not None
+
     def search(self, query: str, k: int = 5) -> list[dict]:
         """Return top-k parts with cosine similarity scores."""
+        if self._embeddings is None:
+            raise RuntimeError("Index not built. Call build() before search().")
         q = self.model.encode([query], normalize_embeddings=True)[0]
         sims = self._embeddings @ q  # cosine (vectors are normalized)
-        top = np.argsort(-sims)[:k]
+        k = min(k, len(self.catalog))
+        # Partition to the top k (O(n)), then sort only that slice, instead of
+        # a full O(n log n) sort of the whole catalog.
+        top = np.argpartition(-sims, k - 1)[:k]
+        top = top[np.argsort(-sims[top])]
         return [
             {"part": self.catalog[i], "score": round(float(sims[i]), 4)}
             for i in top
