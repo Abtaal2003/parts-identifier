@@ -89,7 +89,7 @@ def run_full(cases, index, by_number):
 
     from cerebras.cloud.sdk import Cerebras
 
-    from app import extract_json, identify_from_candidates
+    from app import identify_from_candidates
 
     client = Cerebras(api_key=os.environ["CEREBRAS_API_KEY"],
                       timeout=45.0, max_retries=2)
@@ -112,7 +112,7 @@ def run_full(cases, index, by_number):
 
     n = len(e2e_latencies)
     if n:
-        print(f"\n=== End-to-end evaluation (retrieval + LLM identification) ===")
+        print("\n=== End-to-end evaluation (retrieval + LLM identification) ===")
         print(f"Final accuracy     : {correct}/{n}  ({100*correct/n:.1f}%)")
         print(f"Median E2E latency : {statistics.median(e2e_latencies):.0f} ms")
 
