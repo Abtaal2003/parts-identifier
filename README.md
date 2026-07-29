@@ -1,5 +1,7 @@
 # Field Parts Identifier — Multimodal RAG (FastAPI + Cerebras)
 
+[![CI](https://github.com/Abtaal2003/parts-identifier/actions/workflows/ci.yml/badge.svg)](https://github.com/Abtaal2003/parts-identifier/actions/workflows/ci.yml)
+
 Field-inspection tool: upload a photo of a damaged street asset and/or a short
 damage description, and the system identifies the correct replacement part
 from a 132-part catalog spanning 19 asset categories (traffic signals,
@@ -61,6 +63,14 @@ Open http://127.0.0.1:8000 — stop with Ctrl+C.
 First launch downloads the embedding model and builds the index (a minute or
 two); every launch after that loads from cache in under a second.
 
+## Test
+```bash
+uv run pytest -m "not slow"   # 36 tests, no network, no model load (<1s)
+uv run pytest -m slow         # retrieval accuracy against the labeled set
+uv run ruff check .
+```
+CI runs all three on every push.
+
 ## Evaluate
 ```bash
 uv run python eval/run_eval.py           # retrieval accuracy, free, no API
@@ -81,6 +91,8 @@ parts-identifier/
 ├── eval/
 │   ├── testcases.json        # 50 labeled test queries
 │   └── run_eval.py           # accuracy + latency harness
+├── tests/                    # pytest suite (fast + slow markers)
+├── .github/workflows/ci.yml  # lint, tests, retrieval accuracy
 ├── templates/index.html      # single-page UI
 ├── pyproject.toml            # uv-managed dependencies
 └── .env.example              # copy to .env, add key
@@ -91,6 +103,10 @@ parts-identifier/
 - The UI shows total latency per request and the retrieval top-5 with scores.
 - Non-catalog subjects return a clear "no catalog match" reply; the server
   rejects any part ID outside the retrieved candidates.
-- `/health` endpoint reports catalog size and model.
+- `/health` reports catalog size, model, and index readiness; interactive
+  API docs are at `/docs`.
+- Blocking work (Cerebras calls, embedding) runs in the threadpool, so
+  concurrent requests overlap instead of serialising behind the event loop.
+- Uploads are validated by magic bytes, not just the declared content type.
 - Regenerate/extend the catalog: edit `data/generate_catalog.py`, run it,
   restart (the embedding cache auto-invalidates via catalog hash).
