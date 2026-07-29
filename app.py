@@ -7,6 +7,9 @@ Pipeline per request:
   3. cosine top-5 retrieval over the 130+ part catalog (NumPy, in-memory)
   4. Cerebras identifies the part from ONLY those candidates (JSON contract)
 
+Every blocking step (network calls, torch encode) is dispatched to the
+threadpool so the event loop stays free and requests genuinely overlap.
+
 Run:
     cp .env.example .env      (paste your key into .env)
     uv sync
@@ -14,20 +17,22 @@ Run:
 Then open http://127.0.0.1:8000
 """
 
+import asyncio
 import base64
 import json
 import os
 import re
 import time
+from contextlib import asynccontextmanager
 from pathlib import Path
-from typing import Optional
-
-from dotenv import load_dotenv
-from fastapi import FastAPI, File, Form, HTTPException, UploadFile
-from fastapi.responses import FileResponse
-from pydantic import BaseModel
 
 from cerebras.cloud.sdk import Cerebras
+from dotenv import load_dotenv
+from fastapi import FastAPI, File, Form, HTTPException, UploadFile
+from fastapi.concurrency import run_in_threadpool
+from fastapi.responses import FileResponse
+from pydantic import BaseModel, Field
+
 from retrieval import PartsIndex
 
 load_dotenv()
@@ -37,30 +42,65 @@ CATALOG_PATH = APP_DIR / "data" / "parts_catalog.json"
 MODEL = "gemma-4-31b"
 ALLOWED_MIME = {"image/jpeg", "image/png", "image/webp"}
 MAX_IMAGE_BYTES = 8 * 1024 * 1024
+MAX_DESCRIPTION_CHARS = 2000
 TOP_K = 5
+# Cerebras enforces per-key rate limits; cap in-flight calls rather than
+# letting a burst of requests fan out and collect 429s.
+MAX_CONCURRENT_MODEL_CALLS = 4
 
-from contextlib import asynccontextmanager
+index = PartsIndex(CATALOG_PATH)
+_client: Cerebras | None = None
+_model_sem = asyncio.Semaphore(MAX_CONCURRENT_MODEL_CALLS)
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    secs = index.build()
-    index.search("warmup", k=1)  # load the query encoder now, not on first request
+    global _client
+    secs = await run_in_threadpool(index.build)
+    await run_in_threadpool(index.search, "warmup", 1)  # load the query encoder now
     print(f"[rag] index ready: {len(index.catalog)} parts embedded in {secs:.2f}s")
+
+    # Build the SDK client once at startup so concurrent requests can never
+    # race to construct it.
+    api_key = os.environ.get("CEREBRAS_API_KEY")
+    if api_key:
+        _client = Cerebras(api_key=api_key, timeout=45.0, max_retries=2)
+    else:
+        print("[warn] CEREBRAS_API_KEY is not set; /identify will return 500")
     yield
 
 
-app = FastAPI(title="Field Parts Identifier", version="2.0.1", lifespan=lifespan)
-
-index = PartsIndex(CATALOG_PATH)
+app = FastAPI(
+    title="Field Parts Identifier",
+    version="2.1.0",
+    description=(
+        "Upload a field photo and/or a damage description; the service "
+        "retrieves candidate parts by embedding similarity and asks a "
+        "vision LLM to choose among them."
+    ),
+    lifespan=lifespan,
+)
 
 
 # ---------------------------- models ----------------------------
 
+class Part(BaseModel):
+    """A catalog entry. Mirrors the schema in data/parts_catalog.json."""
+
+    id: str = Field(examples=["TS-001"])
+    asset_type: str = Field(examples=["Traffic light"])
+    part_name: str = Field(examples=["LED Signal Module - Red (200mm)"])
+    part_number: str = Field(examples=["TL-LED-R200"])
+    description: str
+    keywords: list[str]
+    unit_price_usd: float
+    in_stock: int
+
+
 class Candidate(BaseModel):
     id: str
     part_name: str
-    score: float
+    score: float = Field(description="Cosine similarity, 0-1, higher is closer.")
 
 
 class Timings(BaseModel):
@@ -72,7 +112,7 @@ class Timings(BaseModel):
 
 class IdentifyResponse(BaseModel):
     match: bool
-    part: Optional[dict] = None
+    part: Part | None = None
     confidence: str = "low"
     asset_identified: str = ""
     damage_summary: str = ""
@@ -82,23 +122,38 @@ class IdentifyResponse(BaseModel):
     timings: Timings
 
 
+class HealthResponse(BaseModel):
+    status: str
+    parts: int
+    model: str
+    index_ready: bool
+
+
 # ---------------------------- helpers ----------------------------
 
-_client: Optional[Cerebras] = None
-
-
 def get_client() -> Cerebras:
-    global _client
-    api_key = os.environ.get("CEREBRAS_API_KEY")
-    if not api_key:
+    if _client is None:
         raise HTTPException(
             500,
             "CEREBRAS_API_KEY is not set. Copy .env.example to .env, "
             "paste your key in, and restart the app.",
         )
-    if _client is None:
-        _client = Cerebras(api_key=api_key, timeout=45.0, max_retries=2)
     return _client
+
+
+def sniff_mime(raw: bytes) -> str | None:
+    """Identify the real image type from magic bytes.
+
+    The browser-supplied content_type is client-controlled, so it is checked
+    for a fast rejection but never trusted on its own.
+    """
+    if raw.startswith(b"\xff\xd8\xff"):
+        return "image/jpeg"
+    if raw.startswith(b"\x89PNG\r\n\x1a\n"):
+        return "image/png"
+    if raw[:4] == b"RIFF" and raw[8:12] == b"WEBP":
+        return "image/webp"
+    return None
 
 
 def extract_json(text: str) -> dict:
@@ -147,7 +202,7 @@ def identify_from_candidates(
     candidates: list[dict],
     description: str,
     caption: str,
-    image: Optional[tuple[str, str]],
+    image: tuple[str, str] | None,
 ) -> dict:
     cand_json = json.dumps([c["part"] for c in candidates], indent=2)
     system = f"""You are a maintenance parts identification assistant. An
@@ -200,22 +255,53 @@ Respond with ONLY a JSON object, no markdown fences:
     return extract_json(resp.choices[0].message.content)
 
 
+async def call_model(fn, *args):
+    """Run a blocking Cerebras call off the event loop, with error mapping.
+
+    Concurrency is capped by a semaphore so a burst of requests does not fan
+    out into rate-limit errors.
+    """
+    async with _model_sem:
+        try:
+            return await run_in_threadpool(fn, get_client(), *args)
+        except HTTPException:
+            raise
+        except ValueError as e:  # covers json.JSONDecodeError
+            raise HTTPException(
+                502, "The model returned an unreadable response. Please try again."
+            ) from e
+        except Exception as e:
+            msg = str(e).lower()
+            if "timeout" in msg or "timed out" in msg:
+                raise HTTPException(
+                    504,
+                    "The model took too long to respond. This happens "
+                    "occasionally - just hit Identify part again.",
+                ) from e
+            raise HTTPException(502, f"Cerebras API call failed: {e}") from e
+
+
 # ---------------------------- routes ----------------------------
 
-@app.get("/")
+@app.get("/", include_in_schema=False)
 def home():
     return FileResponse(APP_DIR / "templates" / "index.html")
 
 
-@app.get("/health")
+@app.get("/health", response_model=HealthResponse)
 def health():
-    return {"status": "ok", "parts": len(index.catalog), "model": MODEL}
+    return HealthResponse(
+        status="ok",
+        parts=len(index.catalog),
+        model=MODEL,
+        index_ready=index.is_ready,
+    )
 
 
 @app.post("/identify", response_model=IdentifyResponse)
 async def identify(
     description: str = Form(""),
-    image: Optional[UploadFile] = File(None),
+    image: UploadFile | None = File(None),
 ):
     t_start = time.perf_counter()
     description = description.strip()
@@ -225,64 +311,66 @@ async def identify(
         raise HTTPException(
             400, "Add a photo, a short description, or both before searching."
         )
+    if len(description) > MAX_DESCRIPTION_CHARS:
+        raise HTTPException(
+            400,
+            f"Description is longer than {MAX_DESCRIPTION_CHARS} characters. "
+            "Please summarise the damage.",
+        )
 
-    img: Optional[tuple[str, str]] = None
+    img: tuple[str, str] | None = None
     if has_image:
         if image.content_type not in ALLOWED_MIME:
             raise HTTPException(
                 400,
                 f"Unsupported image type '{image.content_type}'. Use JPG, PNG, or WebP.",
             )
+        # Reject on the declared size before pulling the body into memory.
+        if image.size is not None and image.size > MAX_IMAGE_BYTES:
+            raise HTTPException(400, "Image is larger than 8 MB. Please resize it.")
         raw = await image.read()
         if len(raw) > MAX_IMAGE_BYTES:
             raise HTTPException(400, "Image is larger than 8 MB. Please resize it.")
-        img = (image.content_type, base64.b64encode(raw).decode("utf-8"))
-
-    client = get_client()
-    timings = Timings()
-
-    def api_guard(fn, *args):
-        try:
-            return fn(client, *args)
-        except (ValueError, json.JSONDecodeError):
+        actual = sniff_mime(raw)
+        if actual is None:
             raise HTTPException(
-                502, "The model returned an unreadable response. Please try again."
+                400,
+                "That file is not a readable JPG, PNG, or WebP image. "
+                "Please re-export it and try again.",
             )
-        except Exception as e:
-            msg = str(e)
-            if "timeout" in msg.lower() or "timed out" in msg.lower():
-                raise HTTPException(
-                    504,
-                    "The model took too long to respond. This happens "
-                    "occasionally - just hit Identify part again.",
-                )
-            raise HTTPException(502, f"Cerebras API call failed: {e}")
+        img = (actual, base64.b64encode(raw).decode("utf-8"))
+
+    timings = Timings()
 
     # 1. caption (only if a photo was attached)
     caption = ""
     if img is not None:
         t0 = time.perf_counter()
-        caption = api_guard(caption_image, img[0], img[1])
+        caption = await call_model(caption_image, img[0], img[1])
         timings.caption_ms = int((time.perf_counter() - t0) * 1000)
 
-    # 2 + 3. embed query locally and retrieve top-k
+    # 2 + 3. embed query locally and retrieve top-k (torch encode blocks, so
+    # it is dispatched to the threadpool too)
     t0 = time.perf_counter()
     query = " ".join(filter(None, [description, caption]))
-    candidates = index.search(query, k=TOP_K)
+    candidates = await run_in_threadpool(index.search, query, TOP_K)
     timings.retrieval_ms = int((time.perf_counter() - t0) * 1000)
 
     # 4. final identification against candidates only
     t0 = time.perf_counter()
-    result = api_guard(identify_from_candidates, candidates, description, caption, img)
+    result = await call_model(
+        identify_from_candidates, candidates, description, caption, img
+    )
     timings.identify_ms = int((time.perf_counter() - t0) * 1000)
     timings.total_ms = int((time.perf_counter() - t_start) * 1000)
 
     part = None
     if result.get("match") and result.get("part_id"):
-        part = index.by_id.get(result["part_id"])
+        candidate_part = index.by_id.get(result["part_id"])
         allowed = {c["part"]["id"] for c in candidates}
-        if part is None or result["part_id"] not in allowed:
-            part = None
+        if candidate_part is not None and result["part_id"] in allowed:
+            part = Part(**candidate_part)
+        else:
             result["match"] = False
             result["message"] = (
                 "I recognized the asset, but no suitable replacement is in "
@@ -312,4 +400,7 @@ async def identify(
 if __name__ == "__main__":
     import uvicorn
 
-    uvicorn.run("app:app", host="127.0.0.1", port=8000, reload=True)
+    # reload=False: the reloader would load the embedding model twice.
+    # For auto-reload during development use:
+    #   uv run uvicorn app:app --reload
+    uvicorn.run(app, host="127.0.0.1", port=8000)
