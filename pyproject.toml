@@ -28,7 +28,9 @@ markers = [
 
 [tool.ruff]
 line-length = 100
-exclude = ["data/generate_catalog.py"]
+# extend-exclude, not exclude: `exclude` would replace ruff's built-in list
+# (which covers .venv, site-packages, build dirs) instead of adding to it.
+extend-exclude = ["data/generate_catalog.py"]
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP", "B"]
